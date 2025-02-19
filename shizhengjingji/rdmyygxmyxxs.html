@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>热点蔓延，阳光下没有新鲜事。 - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="热点蔓延阳光下没有新鲜事"><a class="header" href="#热点蔓延阳光下没有新鲜事">热点蔓延，阳光下没有新鲜事。</a></h1>
+<blockquote>
+<p>2007/8/14 15:49:37</p>
+</blockquote>
+<p>当然，没有阳光下也同样没有新鲜事。今天的走势，唯一的特点，就是没有新鲜事。从上周起，本ID不断强调热点开始蔓延，今天，这热点已经开始燎原。</p>
+<p>50-300-二、三线，本ID已经给股票的热点蔓延画出了线路图，现在，不过是按着线路图的一种演绎，正所谓阳光下没有新鲜事。</p>
+<p>今天，14-27这5分钟中枢的第三买点35也总算给憋出来了（偶尔看到有问为什么不是九段？九段可延伸成5分钟中枢，可不等于5分钟中枢就一定是九段，这么简单的逻辑关系可别搞糊涂了。）</p>
+<p>5分钟第三类买点后，只有两个选择：一、继续上涨直到形成新的5分钟中枢；二、在目前位置附近形成大一级别的30分钟中枢。</p>
+<p>现在，关键是热点的蔓延持续，只要这没问题，一切都好办。</p>
+<p>站在日线角度，提两个思考题：</p>
+<p>1、目前日线的背驰段解除没有？提示，关键是哪段和哪段比，连相比的对象都没分清楚，还谈什么背驰段？更不用说什么精确定位了。</p>
+<p>2、4174点的1/2突破后，下一条真正的压力线在哪里？</p>
+<p>注意，本ID战略转移，并不会影响博客的一切活动，只是有时候晚上的文章，可能会因为应酬改到早上发，如此而已。而且，本ID现在是战略转移，0成本的股票是不会抛的，没到0成本的，本ID也不会胡乱抛的，没到卖点，凭什么抛？今天，能在49下买到002149的，可要感谢本ID，某人脑子进水，竟然企图让本ID在50下出来，一开盘就企图打压，脑子有水吧？这股票，本ID会抛至少一半的，但想让本ID今早49以下就抛，简直病得不轻。</p>
+<p>今天可以回答问题到4点半。</p>
+<blockquote>
+<p>回复</p>
+<blockquote>
+<p>缠中说禅 2007/8/14 15:53:05</p>
+<p>新浪这版改得真没法说了，各位将就用，本ID已经有点将就不住了。不过，没法子，本ID念旧，新地方一样有新问题，那就继续吧。</p>
+<p>缠中说禅 2007/8/14 15:58:20</p>
+<p>[匿名] 新浪网友 删除此人所有评论</p>
+<p>2007-08-14 15:54:47</p>
+<p>能谈谈对“次级债“的看法吗?</p>
+<p>==</p>
+<p>这类问题，在本ID关于货币战争的帖子里都说过了。其中一个比喻是这样的，美国这个发动机积炭了，只能换一个新的。新的，可以是一个新国家，例如中国，但美国人显然不乐意。唯一让美国人乐意的，就是全世界人出钱为美国人换一个新的。而从2001年起美国人的所有玩意，就是这种玩意，不管这玩意变了多少名字。</p>
+<p>缠中说禅 2007/8/14 16:01:58</p>
+<p>[匿名] 新浪网友 删除此人所有评论</p>
+<p>2007-08-14 15:56:06</p>
+<p>为什么第三买点不是33？</p>
+<p>==</p>
+<p>如果是33，前面离开的一分钟走势就是未完成的。饿日现在，离开是27-32，回抽是32-35，都是标准的1分钟走势类型。</p>
+<p>缠中说禅 2007/8/14 16:06:43</p>
+<p>[匿名] 举杯邀明月 删除此人所有评论</p>
+<p>2007-08-14 16:01:22</p>
+<p>老师,有个问题,就是假如我用5分钟以及更大级别的K线级别操作的话,画图也还是按照笔—––线段—–中枢这样的同样的方法吧</p>
+<p>另外希望老师能继续股票课程的讲解,别真的离开我们</p>
+<p>==</p>
+<p>本ID什么时候说要离开了？本ID只是说不再新买二级市场的股票，买了窝火。</p>
+<p>请你先把显微镜和被显微镜这两种关系搞清楚。你当然可以只看5分钟图，那等于用一个不太精确的显微镜，难道5分钟图上就没有线段、笔？</p>
+<p>用1分钟图上的线段笔，只是一个更精细的显微镜，这并不影响任何级别的操作。</p>
+<p>关键是对精确度的要求，但笔、线段等等，对任何精确度下的图，都是必要的。本ID不是有一课示范了在月线上如何划分笔、线段了吗？</p>
+<p>缠中说禅 2007/8/14 16:08:26</p>
+<p>[匿名] 新浪网友 删除此人所有评论</p>
+<p>2007-08-14 15:52:25</p>
+<p>k线n-1区间[8,10]</p>
+<p>k线n区间[9,10]</p>
+<p>这两k线是否是包含关系？</p>
+<p>==</p>
+<p>当然是。</p>
+<p>缠中说禅 2007/8/14 16:10:59</p>
+<p>[匿名] 新浪网友 删除此人所有评论</p>
+<p>2007-08-14 16:08:05</p>
+<p>如此看空为何不砸盘啊！</p>
+<p>==</p>
+<p>本ID什么时候看空？至少20年大牛市，目前只是牛市第一阶段，这些观点都无须修正。本ID现在不会再买二级市场的任何股票，只是因为本ID能通过PE买到更便宜的股票，更大的机会，如此而已。</p>
+<p>缠中说禅 2007/8/14 16:22:29</p>
+<p>[匿名] 新浪网友 删除此人所有评论</p>
+<p>2007-08-14 16:05:39</p>
+<p>很想请教博主一个问题：你认为这次中国能否避开日本和东南亚当年最终资产泡沫破裂后经济衰退，百业萧条的后果？或者说退一步说不至于那么严重？</p>
+<p>虽然中国也曾经经历过80和90年代的两次通货膨胀，但当时中国应该算是一个相对现在来说还比较封闭的经济体，泡沫破裂后的强度或许可以通过内部消化，而现在金融开放之后，情况是否应该和日本、香港当年来比较呢？</p>
+<p>期望听到你的意见，好象也曾经听你说过一个“年线级别调整”的看法，我认为这是相当有可能的，毕竟这次中国需要面对的是全世界的资金，还有玩钱已经玩了几百年的大鳄们。</p>
+<p>==</p>
+<p>日本、香港那些怎么能和现在的中国比，现在美国是病人，而在美国病好之前，中国关键是如何去用好化攻大法，让美国就算病好了，功力也被化掉一半。</p>
+<p>如果出现世界范围的通货膨胀，那全部人都逃不掉，到时候比的是谁能最快恢复，显然，如果中国自己不当傻瓜，那一定是中国，这里有深刻的产业链上的道理，以后有空写个帖子说说。</p>
+<p>只要中国能第一个恢复，那么，发生什么并不重要。如果真有1929年，没人能逃掉，拿着什么货币、什么资产都是废话，这就是资本主义的本质所在，一个游戏而已。</p>
+<p>问题不是去逃掉1929年，那不可逃，唯一的区别只是损失大小。能用最小代价活下来，这就是最大的成功，就如同那场把恐龙灭掉的灾难，在那灾难面前，唯一的问题是如何在灾难下生存，而不是祈祷灾难不降临。地球后来的主人，只能在这生存者中。无论国家还是个人，这道理是一样的。</p>
+<p>缠中说禅 2007/8/14 16:24:52</p>
+<p>[匿名] 新浪网友 删除此人所有评论</p>
+<p>2007-08-14 16:11:55</p>
+<p>老大，你以前提到到的8月份政策面风险现在解除了么？</p>
+<p>==</p>
+<p>这还要感谢美国这次的抽风，在这样的国际环境下，谁还敢乱搞，真是活腻了。所以，政策不是万能的，政策不过是合力的结果。但也不是太过分，毕竟，秋后是可以算帐的，当然，现在还夏天，先把夏天过了再说。</p>
+<p>缠中说禅 2007/8/14 16:29:32</p>
+<p>[匿名] 天眼 删除此人所有评论</p>
+<p>2007-08-14 16:21:55</p>
+<p>老大,有几个问题我比较模糊,</p>
+<p>A.关于k线的包含关系.</p>
+<p>一.如果第n-1根K线的高低点全在第n根K线的范围里,那么n-1和n是不是包含关系?</p>
+<p>==</p>
+<p>这当然是，难道还有什么疑问的？对于连续包含关系，必须按时间顺序，一个个合并下去。</p>
+<p>二.下列情况是不是包含关系?</p>
+<p>假设n和n-1 k线的高低点为gn.,dn, gn-1,dn-1 .</p>
+<p>1.gn=gn-1且dn&gt;dn-1;</p>
+<ol start="2">
+<li>
+<p>dn=dn-1.且gn&lt;gn-1;</p>
+</li>
+<li>
+<p>dn=dn-1.且gn=gn-1;</p>
+</li>
+</ol>
+<p>==</p>
+<p>当然是。</p>
+<p>缠中说禅 2007/8/14 16:30:52</p>
+<p>[匿名] 新浪网友 删除此人所有评论</p>
+<p>2007-08-14 16:29:13</p>
+<p>14-27形成5F中枢是否不准确？</p>
+<p>因为14开始的3段的高点不够高？</p>
+<p>==</p>
+<p>中枢和高点高不高有什么关系？中枢，关键是有重合部分。</p>
+<p>缠中说禅 2007/8/14 16:36:13</p>
+<p>年年一变三 删除此人所有评论</p>
+<p>2007-08-14 16:28:18</p>
+<p>2007-08-14 16:01:08</p>
+<p>缠主，看了你昨天的帖子，我们小散没法参与，但我想600635按缠主的宏观思路，是否应该是只大牛呢？</p>
+<p>另问：缠主多次提及636是战略建仓，我只是建早了些，还小套。问缠主不买二级市场的股票也包含636吗？</p>
+<p>缠主先别走，贴了三次了，盼回复！谢谢</p>
+<p>==</p>
+<p>不买就是都不买了，不过600636，本ID在10元上下买了不少，本来是要继续买的，既然都不买了，就都不买，战术服从战略，本ID不买，自然还有别人要买。</p>
+<p>像600737、中铝、中国国航等等中字头以及原来那十来只，本ID都会继续持有的。没有成本为0的，本ID会找机会变为0，这就是套钱的手段，套出来的钱，都离开二级市场去干PE去，如此而已。</p>
+<p>缠中说禅 2007/8/14 16:37:08</p>
+<p>对不起，已经4点半了，本ID要先下了，有机会再聊。</p>
+<p>再见。</p>
+<p>缠中说禅 2007/8/14 16:40:26</p>
+<p>[匿名] 新浪网友 删除此人所有评论</p>
+<p>2007-08-14 16:36:36</p>
+<p>14-27形成5F中枢是否不准确？</p>
+<p>因为14开始的3段的高点不够高？</p>
+<p>==</p>
+<p>中枢和高点高不高有什么关系？中枢，关键是有重合部分。</p>
+<p>===</p>
+<p>我可能没说清楚，因为14开始的3段的高点不够高，使得与后面的六段无法重合？？？</p>
+<p>–</p>
+<p>临走回答一下，这问题太典型，就是概念没搞清楚。5分钟中枢，只要3个1分钟走势类型有重合就可以，不是一定要里面的所有段都重合。所有都重合，只是其中一个特殊的情况，这叫又线段延伸九段后形成5分钟中枢，在这种情况下，同样可以看成是三个1分钟走势类型的重合。</p>
+<p>先下，再见。</p>
+</blockquote>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../shizhengjingji/41y1biddejscxqys.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../shizhengjingji/wwysyfjrzd.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../shizhengjingji/41y1biddejscxqys.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../shizhengjingji/wwysyfjrzd.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

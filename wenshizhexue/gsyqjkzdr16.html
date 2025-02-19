@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>《论语》详解：给所有曲解孔子的人（16） - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="论语详解给所有曲解孔子的人16"><a class="header" href="#论语详解给所有曲解孔子的人16">《论语》详解：给所有曲解孔子的人（16）</a></h1>
+<blockquote>
+<p>2006/10/29 12:10:24</p>
+</blockquote>
+<p>子曰：齐一变，至於鲁；鲁一变，至於道。</p>
+<p>详解：这一章很奇怪，仿佛毫无来由。“齐”和“鲁”，俩诸侯国，怎么“齐一变，至於鲁；鲁一变，至於道。”地折腾两遍就和“圣人之道”搭上界了？其实，这一章是顺着上一章从“人不知”经“人不相”达“人不愠”的大道而来的。</p>
+<p>说起“齐”，都知道是孔子时代的强国，齐桓公，春秋五霸之首，其以“霸术”而行终成“霸业”。“霸术”而“霸业”，是以人之“恶”为前提的：对内以法制民、对外以武制敌，强调的是以暴制暴、以力制力、以恶制恶。这种类型的国家，自古以来从来不缺，是“人不知”所必然导致的社会结构。这种类型的国家，在当代依然被视为最先进的、必须效仿的对象。而在儒家、《论语》看来，这种“齐式”国家，不过是“人不知”的衍生物。</p>
+<p>“人不知”的世界，人之恶是一切行为的前提，在当代经济社会里，扒掉一切伪装，唯一的动力就是人之私欲，利益是经济社会里最高的准则，法律是为保障各种利益而存在的。但在儒家看来，恶只能引发恶，制恶以法只能是权宜之法，诱人以利只能生人以怨，只能使得“贫而谄，富而骄”的“人不知”状态愈发严重直至不可救药，然后玉石俱焚再死灰复燃地重新开始“人不知”所惯有的恶性循环。</p>
+<p>为转化这种“人不知”的“贫而谄，富而骄”，要打破“贫而谄，富而骄”的恶性循环，就有了“齐一变，至於鲁”，企图通过改变以恶为前提的“霸术”而“霸业”的“齐式”国家模式，一变为“鲁式”国家模式。何谓“鲁式”国家？“鲁国”，在孔子时代是打着以“仁”以“德”治国的典型，号称传承着被孔子当成典范的周公之仁德。以“仁”以“德”治国，强调善的力量，对于一个习惯于以恶为前提的“人不知”世界是不可想象的，相比“齐式”国家模式，“鲁式”国家模式的出现是一种进步，所以才有“齐一变，至於鲁”的说法。</p>
+<p>但在“人不知”的世界，以“善”为善，标榜其“善”，往往使得所谓的“善”成为伪善，成为另一种“恶”。而当时的“鲁国”，虽然打着“仁”“德”的旗号，但在孔子看来，这只能是假“仁”假“德”，不是儒家、《论语》所说的“仁”“德”。而当这种假“仁”假“德”成为一种新的意识形态，以此形成一个新的阶层后，“贫而谄，富而骄”的局面依然会出现。因此，这种“鲁式”国家模式并不能打破“贫而谄，富而骄”的恶性循环，这种“鲁式”国家模式依然只是“人不知”世界的一个变种。</p>
+<p>要转化这种“人不知”的“贫而谄，富而骄”，要打破“贫而谄，富而骄”的恶性循环，靠“齐式”、“鲁式”招数都是没用的，必须要“鲁一变，至於道。”何谓“道”？就是从“人不知”经“人不相”达“人不愠”，最终成就圣人之道。“人不知”的世界，以“善”不生为相，因此要对之“不相”，去掉“善”不生之相，从而扬其善；“人不知”的世界，以“恶”不灭为相，因此要对之“不相”，去掉“恶”不灭之相，从而惩其恶。在“人不知”的世界，扬其善、惩其恶，就是“不相”其“贫富”诸相。只有这样，才可能达到“人不相”的“贫而无谄，富而无骄”。</p>
+<p>要成就“人不相”的“贫而无谄，富而无骄”，不能如“齐式”模式那样光立其恶而惩其恶，也不能如“鲁式”模式那样光立其善而扬其善，必须善恶并举、文武并重，所谓“一阴一阳、文武之道”，这是儒家的一贯立场。只有这样，才能扬其善、惩其恶，“不相”其“贫富”诸相，打破得“贫而谄，富而骄”的恶性循环，达到“人不相”的“贫而无谄，富而无骄”，进而实现“贫而乐，富而好礼”的、“人不愠”的大同世界。由此可见，本章仿佛毫无头绪的话，其实是和前几章一脉相承的。</p>
+<p>《论语》成书以来，解者无数，皆不得要领，就是因为其人都没能把握这个“人不知”、“人不相”、“人不愠”的关系，当然也就只能对《论语》肢解、胡解了。这样的人，又有什么资格论《论语》之语？又有什么资格喊“打倒孔家店”？本ID今还《论语》以本来面目，就是要对宋明腐儒、五四竖子、六六小儿“不相”之，如果没有宋明腐儒、五四竖子、六六小儿的“乱相”，本ID也不必行此“不相”之相。儒家走的是刚猛的路子，不是老好人，不能乡愿，这一点是任何一个真想了解《论语》的人必须时刻把握的。</p>
+<p>（待续）
+严禁抄袭，违者必究</p>
+<blockquote>
+<p>回复</p>
+<blockquote>
+<p>缠中说禅 2006/10/29 12:24:36
+公告</p>
+<p>对一次笔墨游戏按暂停键：</p>
+<p>这里的人都知道本ID因为步孔庆东的一个七律而引发一次笔墨游戏。最近，这大叔第三次给本ID一个评价，引用如下：</p>
+<p>“缠中说禅《论语》详解：给所有曲解孔子的人”皆发前人所未发，前无古人，也不必古人。“</p>
+<p>====================</p>
+<p>孔庆东 于2006/10/28 00:42:19 回复到:
+虽然有广告之嫌，但确实解说得不错，下了功夫。</p>
+<p>既然都这样了，拳头不打好脸，本ID当然要按暂停键，但只是暂停键，不是终止键，这是必须明确的。
+缠中说禅 2006/10/29 12:26:06
+公告</p>
+<p>对一次笔墨游戏按暂停键：</p>
+<p>这里的人都知道本ID因为步孔庆东大叔的一个七律而引发一次笔墨游戏。最近，这大叔第三次给本ID一个评价，引用如下：</p>
+<p>“缠中说禅《论语》详解：给所有曲解孔子的人”皆发前人所未发，前无古人，也不必古人。“</p>
+<p>====================</p>
+<p>孔庆东 于2006/10/28 00:42:19 回复到:
+虽然有广告之嫌，但确实解说得不错，下了功夫。</p>
+<p>既然都这样了，拳头不打好脸，本ID当然要按暂停键，但只是暂停键，不是终止键，这世界上的事情不能太绝对，没什么是一定要终止的，这是必须明确的。
+缠中说禅 2006/10/29 12:33:01
+孔大叔的事情就这样了，孔二爷的事情还需要继续折腾，各位请耐心看。
+缠中说禅 2006/10/29 15:01:04</p>
+<p>我是鬼，天天叫。</p>
+<p>我是鬼，天天叫。</p>
+<p>我是鬼，天天叫。</p>
+<p>我是鬼，天天叫。</p>
+<p>我是鬼，天天叫。</p>
+<p>我是鬼，天天叫。
+缠中说禅 2006/10/29 17:28:50</p>
+<p>[匿名] 9269k</p>
+<p>《论语》至此，其本质已暴露无遗。无论是站在历史还是现实的角度，仁德之说都是超离历史现实的乌托邦</p>
+<p>===============</p>
+<p>又一个被五四竖子、六六小儿洗脑之人。何谓仁？何谓德？五四竖子、六六小儿又何曾梦见。仁德又岂是宋明腐儒、五四竖子、六六小儿所歪曲的文弱伪善？</p>
+<p>何谓仁？何谓德？下文自有分解。
+缠中说禅 2006/10/29 17:33:20</p>
+<p>倒转时钟</p>
+<p>鲁国如果是楼主眼中的理想化国家,很遗憾我不能赞同.春秋列国,强国治武,弱国治仁,卫国之道罢了.周围有强齐国虎视耽耽,鲁国一味为武,自取灭亡罢了.</p>
+<p>==============</p>
+<p>如果鲁国是理想化国家，又何必 “鲁一变，至於道”？对“仁”的理解不要被鲁迅之流洗脑。武王伐纣就是“仁”，陈胜揭竿就是“仁”。
+缠中说禅 2006/10/29 20:31:13</p>
+<p>[匿名] AK47</p>
+<p>2006-10-29 18:27:29
+很热闹嘛。不错，有争论才是正常。楼主是不是把那流鼻涕的家伙给删了。那个匿名楼主的，是不是也不要留了。</p>
+<p>==========</p>
+<p>本ID这里不删帖子，那些把本ID祖宗十八代都骂了的帖子，本ID也没删。有些广告帖子是新浪删的，和本ID无关。在一个充满战争的年代，为了虚拟空间的几句争吵就看不惯、发牢骚，甚至要删帖子，那太矫情了，简直把自己当成了温室里的花骨朵了。
+缠中说禅 2006/10/29 20:33:09</p>
+<p>[匿名] AK47</p>
+<p>2006-10-29 18:27:29
+很热闹嘛。不错，有争论才是正常。楼主是不是把那流鼻涕的家伙给删了。那个匿名楼主的，是不是也不要留了。</p>
+<p>==========</p>
+<p>本ID这里不删帖子，那些把本ID祖宗十八代都骂了的帖子，本ID也没删。有些广告帖子是新浪删的，和本ID无关。在一个充满战争的年代，为了虚拟空间的几句争吵就看不惯、发牢骚、甚至要删帖子，也太矫情点儿了，简直把自己当成温室里的花骨朵了。
+缠中说禅 2006/10/29 20:35:13</p>
+<p>公告</p>
+<p>在本ID这里，各位想说什么都可以，只要新浪不删，你说的话就绝对一直存在。
+缠中说禅 2006/10/30 12:10:23</p>
+<p>[匿名] 我都说</p>
+<p>2006-10-30 12:05:28
+妹妹,何以删我的回贴?</p>
+<p>=============</p>
+<p>没有，是不是你的帖子带链接或有敏感字，这种情况新浪会自动删掉的。
+缠中说禅 2006/10/30 12:15:02</p>
+<p>再次声明</p>
+<p>有人发现回帖被删掉，这一定是新浪自动或手动干的，本ID是不删帖子的，请各位回帖不要带链接和敏感字，估计就不会有问题了
+缠中说禅 2006/10/30 15:37:37
+估计那个邮箱也有问题。</p>
+</blockquote>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../wenshizhexue/gsyqjkzdr15.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../wenshizhexue/gsyqjkzdr17.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../wenshizhexue/gsyqjkzdr15.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../wenshizhexue/gsyqjkzdr17.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

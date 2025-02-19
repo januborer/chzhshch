@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>少年诗篇：脑子缺水的失恋 - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="少年诗篇脑子缺水的失恋"><a class="header" href="#少年诗篇脑子缺水的失恋">少年诗篇：脑子缺水的失恋</a></h1>
+<blockquote>
+<p>2006/6/20 15:30:08</p>
+</blockquote>
+<p>无论是13岁的脑子还是83岁的脑子，进了水就有所谓的热恋，缺了水就有所谓的失恋，下面继续的是一个13岁左右的脑子缺水后幻化出的情景。</p>
+<p><img src="../assets/shiciqufu/snspnzjsdsl.jpeg" alt="" /></p>
+<p>一</p>
+<p>雕殘的舊夢中，閉上回憶的睡眼</p>
+<p>逝去年華的幻影浸漬著冰結之心</p>
+<p>海中的巨石，凝重的你依然深深地</p>
+<p>沈澱在我澎湃的心潮下，默然不動</p>
+<p>微笑著、微笑著令人心醉的眼</p>
+<p>無情地、金鏈般把我靈魂緊鎖</p>
+<p>愛！——愛對我究竟又有何用</p>
+<p>我鍾情的只是你那幸福的冷峻</p>
+<p>浩瀚大海上，高高矗立一座大理石雕像</p>
+<p>靜靜地、悠然忘卻著大海的哀歎與跪請</p>
+<p>在石像所鄙棄的腳下，大海正用無邊的</p>
+<p>眼淚擁抱著她心愛的、永遠沈默的人兒</p>
+<p>然而，借著太陽的餘輝，石像將長長灰影</p>
+<p>灑向遠方，無情地破碎著大海幸福的淚光</p>
+<p>二</p>
+<p>曾經</p>
+<p>我的心是這樣的陰鬱，就象一潭從未</p>
+<p>被陽光拜訪過的腐水，漾著無數枯枝</p>
+<p>的水面上散出了腥味。</p>
+<p>然而</p>
+<p>在那月隱星稀的靜夜，你竟涉足潭邊</p>
+<p>望著閃現的幾點星光，深情地忘卻了</p>
+<p>這潭兒的腐臭與汙穢。</p>
+<p>不久</p>
+<p>晨光劃破灰暗的天幕，震詫的你猛然</p>
+<p>從飄渺的幻夢中驚醒，憤然離開了這</p>
+<p>曾使你妄戀過的死水。</p>
+<p>從此</p>
+<p>悲哀的潭兒低下頭來，默默地接受著</p>
+<p>一切汙物無私的奉獻，在每一靜夜中</p>
+<p>用淚隱去那點點星輝。</p>
+<p>三</p>
+<p>湖邊長著年老的松樹，</p>
+<p>在那金色的五月清晨，</p>
+<p>我倆曾把這名字</p>
+<p>深深刻入灰皺的樹皮。</p>
+<p>道旁有片狹長的空地，</p>
+<p>在那蕭瑟的秋日黃昏，</p>
+<p>顆顆離別的淚珠</p>
+<p>無聲灑遍裸露的黃土。</p>
+<p>如今，刻著名字的</p>
+<p>樹皮早被頑童剝去，</p>
+<p>灑下熱淚的黃土</p>
+<p>早已長出芳草如鋪。</p>
+<p>噢，當幸福剝落了，</p>
+<p>悲哀總會長得茂盛。</p>
+<p>四</p>
+<p>啊，從前的知友，昔日的良朋，</p>
+<p>時光流逝，並未使我改變絲毫，</p>
+<p>曾兩心相印、攜手同行的你我，</p>
+<p>如今爲何互爲路人，苦苦煎熬？</p>
+<p>曾幾何時，我撐開絕望的淚眼凝望，</p>
+<p>從那輕柔的眼波中貪婪地吸取溫存；</p>
+<p>伸出無力的雙臂緊緊把你擁抱，</p>
+<p>讓那生命的熱流頃刻傳遍全身。</p>
+<p>現在，春光下的繁花變成秋風中的黃葉，</p>
+<p>盛夏如火的豔陽化作了隆冬刺骨的寒氣。</p>
+<p>這溫柔的雙眼，曾給我多少撫慰，</p>
+<p>此刻竟變成利刃兩把，向我直刺。</p>
+<p>來吧，就讓我的心去磨鈍你的刃，</p>
+<p>莫讓它再去傷害那顆顆如我的心。</p>
+<p>五</p>
+<p>日日夜夜，夜夜日日，</p>
+<p>淡不了的一段舊情，</p>
+<p>理不清的一束愁絲，</p>
+<p>苦酒一杯，永喝不停。</p>
+<p>往昔不期的相遇，</p>
+<p>碎石一塊墜入湖裏，</p>
+<p>寧靜的心靈深處</p>
+<p>激起了層層的漣漪。</p>
+<p>我這皺褶的心啊，</p>
+<p>額上蒼老的標記，</p>
+<p>無情的流光不斷</p>
+<p>刻上難言的回憶。</p>
+<p>情感的痛苦終能用淚水平服，</p>
+<p>這理智的悲哀，又如何背負？</p>
+<p>六</p>
+<p>懷著熱情，將心來揭示，</p>
+<p>希望得到理解、同情，</p>
+<p>但在你那高傲的臉上，</p>
+<p>只看到平靜，令人窒息。</p>
+<p>月亮的清輝，總是寒冷著靜夜，</p>
+<p>即使反射著世上最燦爛的光芒。</p>
+<p>那熾熱的太陽——就是我啊，</p>
+<p>眼前的你卻令我，如此心涼。</p>
+<p>七</p>
+<p>哦，愛人，我並不曾想你、夢你，</p>
+<p>你的容顔、身影，從未在我心頭留下一絲痕迹；</p>
+<p>你的傲慢、無情，也從不曾令我感到半點心傷，</p>
+<p>你的一切，對我來說都毫無意義。</p>
+<p>我沒有心，也失去了靈魂，只剩下麻木的身軀。</p>
+<p>一切曾屬我的都沒有了，再不會有任何的失去，</p>
+<p>一切可以失去的，都已奉獻給你，只剩下死亡！</p>
+<p>難道你也需要，我的死亡？——</p>
+<p>拿去吧，拿去！這是我最後的奉獻，</p>
+<p>沒有心，沒有靈魂，也失去了死亡。</p>
+<p>八</p>
+<p>星星，你這小不點，</p>
+<p>究竟有什麽的心事？</p>
+<p>爲什麽要閃動不停，</p>
+<p>仿如我那顫動的心。</p>
+<p>你也失去良朋、知友，</p>
+<p>也爲往昔痛苦、憂傷？</p>
+<p>啊，同病相憐的人兒，</p>
+<p>請告訴我：“爲什麽？”</p>
+<p>你要走了，永遠離去，</p>
+<p>爲追尋失去的一切，</p>
+<p>跪在那狠心的人面前</p>
+<p>哭訴你無邊的悔恨與哀歎？</p>
+<p>你要走了，永遠離去，</p>
+<p>爲追尋知友的足迹，</p>
+<p>在行行的腳印上灑下</p>
+<p>傷心淚水，種上藍色花兒？</p>
+<p>噢，同病相憐的人兒，</p>
+<p>快用你寒冷的清輝，</p>
+<p>把所有的痛苦都深深</p>
+<p>刻進我這一顆無力的心靈。</p>
+<p>九</p>
+<p>我能喝什麽？一壺淡酒、一杯</p>
+<p>清茶，還是一碗毒人的濃藥？</p>
+<p>我能想什麽？一陣秋風、一場</p>
+<p>春雨，還是一段未了的舊情？</p>
+<p>我能寫什麽？一首小詩、一闋</p>
+<p>短歌、還是一部蒼涼的悲劇？</p>
+<p>確實——我能喝、能想、能寫，</p>
+<p>喝的濃藥、想的舊情，寫的悲劇！</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../shiciqufu/snspnzjsdrl.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../shiciqufu/qygsysrssmmhr.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../shiciqufu/snspnzjsdrl.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../shiciqufu/qygsysrssmmhr.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>教你打坐29：那堆矛盾论、辩证法的蠢人 - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="教你打坐29那堆矛盾论辩证法的蠢人"><a class="header" href="#教你打坐29那堆矛盾论辩证法的蠢人">教你打坐29：那堆矛盾论、辩证法的蠢人</a></h1>
+<blockquote>
+<p>2008/7/13 8:41:48</p>
+</blockquote>
+<p>先汇报一下周五理疗来的活动。理疗前，左侧异常不舒服，本ID的弟弟又不会一些招数，十九路的人又毫无踪影，本ID只好外出觅食，找到一个尚可的中医。本ID开始试图说服其对那奇人说的病根大打出手，结果他中老年性地异常小心，一再追问本ID颈部的肿块情况，本ID只好说了些善意谎言，把其引诱到病根外一层的病象上，然后说，你怕那玩意，那就对这下手，总不会有问题吧。先金钱交易，其后一阵忙乱的动作，其中涉及一种最普通的中医手法，那奇人要求的他不会，这倒弄得还可以，半小时后，本ID就可以扬长而去了。</p>
+<p>回到公寓，如洪水泛滥，时塞时泄，2小时不到时间，不仅左侧麻烦消，颈部肿块也明显地变小，看来奇人与本ID现在认定的病根又被验证了，蒙人在外围用最普通的手段竟然有这效果，我弟弟也终于很明确地说了一句，看来那人说的是对的。</p>
+<p>不过，从这以后，十分不健康：先找来两人凑成四人帮出去对一桌子美食严重文革了N小时，然后回来在四方城下展开了16圈的连夜鏖战，在东方发白之际才鸣金收兵，起来午饭后又去看房子去。现在地点基本定了，那房子在CBD里，顶层复式可带游泳池，由于要大动土木，所以实地考察、约设计师看能否有好的装修效果，实在够折腾。</p>
+<p>晚上回来，发现肿块竟然没有变大，深夜又变成锥型，现在起来了，基本还保持，不知道是否有些古怪事发生，本ID等着。</p>
+<p>现在有两套房子可选择，除了上面可带游泳池的那套，还有一个面积小不少的平层，想在新房子看奥运，就只能后者了。基本也就这两个选择，之所以不能完全确认，是前者的装修效果能否满意必须让设计师给本ID信心，因此只好等月底之前确定后再说了。</p>
+<p>好的，该汇报的都汇报了，就继续打坐吧。</p>
+<p>二十世纪五、六十年代的学术闹剧里，曾有所谓的“合二为一”伪擂台毛大爷的“一分为二”，且不说结果如何，都不过五十与一百的把戏。无论“合二为一”还是“一分为二”，都不过是在矛盾论、辩证法弱智文字游戏的自渎空间中展开。</p>
+<p>站在学术的角度，世界上大概没有太多事情比二十世纪五、六十年代后还以某某伟人说的口吻在十几亿人口的大国中继续谈论所谓“物质无限可分”的正确更让人喷饭了，而这竟然成了所谓“一分为二”弱智论点的证据。而实际上，任何生活于量子力学之后玩学术的人，除非脑瘫，都应该知道“分”是有边界条件的，“可分”更必须建立在可量子力学的层面上，“物质无限可分”只不过是不学无术者的弱智幻想。</p>
+<p>一且不立，何来立二？只有那些忒二之人，才会“一分为二”、“二分为一”地显示其二。</p>
+<p>有人可能要以恩格斯说事，反驳本ID，既然你要捍卫马克思，那么恩格斯还有《自然辩证法》。而实际上，马克思是马克思，老马与恩格斯之间的思想差异，前人多有论述，而恩格斯最二的，就是那《自然辩证法》了。恩格斯更像是马克思向列宁异化的中间桥梁，其中的历史渊源与演化，其实是一个很有趣的课题，只是这种课题，大概是小儿不宜、大国亦不宜矣。</p>
+<p>所谓矛盾论、辩证法，不过是人类游戏中画地为牢后一串逻辑呓语，而学且以之为宝的（排除智力问题，更多地关系于政治表演），又以此为牢，“物质无限可分”地无限K粉了。</p>
+<p>矛盾论、辩证法的弱智呓语太多，一一批驳和连载主题太不靠谱了，这里就以最早的一条之一“人不能二次跨进同一条河流”为例子，让各位看看其无聊把戏。</p>
+<p>任何“同一”性论断，必须建立在可观察的角度，而可观察，意味着重复性，一次性的东西都不存在可观察性的。因此，“同一条河流”判断的建立，也必须在重复性的可观察基础上，否则，那“同一条河流”不过是一串脑电波的颤动，和实际的世界毫无可观察的关系。</p>
+<p>因此，如果没有任何手段去重复确认这“同一条河流”可观察的客观可建立，“人不能二次跨进同一条河流”逻辑呓语就更无法建立了；如果存在某种手段去重复确认“同一条河流”可观察的客观可建立，那么，可观察性是不能在观察者跨进河流后就变得不可观察，可观察能重复多少次，当然就能跨进多少次这在可观察保证下的“同一条河流”，谁说我们不能泡在水里观察河流的？</p>
+<p>现在，环境恶劣，那些河流都很脏，如果没有一定的解毒能力，泡吧泡网泡脚泡鸡鸭鹅兔也千万别跨进那无聊的矛盾论、辩证法呓语河流去泡，太脏！</p>
+<p>至于本ID，天堂地狱任往来，就甭说这矛盾论、辩证法的肮脏河流。吸尽千江脏水，吃尽世间毒物，才是真修行、真打坐，没有这见地与实行，还是回家生孩子学矛盾轮、辩证法去吧。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chzhshch/renzhemeiquganhuilaixietz.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../chzhshch/jiaonidazuo30.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chzhshch/renzhemeiquganhuilaixietz.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../chzhshch/jiaonidazuo30.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

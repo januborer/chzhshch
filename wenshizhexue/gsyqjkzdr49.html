@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>《论语》详解：给所有曲解孔子的人（49） - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="论语详解给所有曲解孔子的人49"><a class="header" href="#论语详解给所有曲解孔子的人49">《论语》详解：给所有曲解孔子的人（49）</a></h1>
+<blockquote>
+<p>2007/1/29 15:07:55</p>
+</blockquote>
+<p>子曰：学而不思则罔，思而不学则殆。</p>
+<p>杨伯峻：孔子说：“只是读书，却不思考，就会受骗；只是空想，却不读书，就会缺乏信心。”</p>
+<p>钱穆：先生说：“仅从外面学，不知用思想，终于迷惘了。仅知用思想，不向外面学，那又危殆了。”</p>
+<p>李泽厚：孔子说：“学习而不思考，迷惘；思考而不学习，危险。”</p>
+<p>详解：这是比康德“感性无知性则盲，知性无感性则空”更彻底穷源的一章。“学”，闻“圣人之道”、见“圣人之道”、“对照”“圣人”、在现实社会中不断地“校对”，这是以差异性为前提的；而“思”，《说文》有“思，容也”，“容”，离不开一定的范式，例如一个筛子，对水来说就不是“容”的，还有所谓不可思议，相应的潜台词就是“可思”有一个潜在的标准，超过这标准的，就被当成不可思议了。“思”的前提在于同一性，例如，能被欧氏几何所“思”，那其潜台词就是对象运动的刚体性在所“思”的对象中具有同一性，因此才会有把所有边长相等的正方形当成一样的可能。如果没有“同一性”，一切科学都是不可思的，例如物理，一个最简单的同一性例子就是在狭义相对论里，任何惯性系都被看成同一的，如果没有这同一性的要求，狭义相对论根本无法展开。在哲学里，就算是以重整形而上学为己任的海德格尔，其存在之“思”，也摆脱不了某种“同一性”的潜台词。</p>
+<p>对于以差异性为前提的“学”与以同一性为前提的“思”，孔子的见解与德里达有相通的地方。德里达那里，差异性与同一性纠缠在延异之中，同时在场或缺席，在延异中不可能纯粹地分解或确立差异性与同一性，也不可能由差异性与同一性构造或结构出延异，这与“合二为一”或“一分为二”的胡诌辩证法没任何关系。“合二为一”或“一分为二”这类垃圾命题，只能是那些毫无哲学素养的野鸭店哲学家才可能当成宝来忽悠。</p>
+<p>上面三家与通常的解释，都不知道何谓“学”何谓“思”，更不知道“学”与“思”所隐含的前提。“学而不思则罔，思而不学则殆”是典型的互文，求所谓“学而不思”、“思而不学”，都只能迷惘、疲怠而无所得。“学”与“思”，当下地纠缠一起不可分。任何的“学”，都以同一性的“思”为前提，这一点，连康德都很清楚，如果没有“思”的某种前提性结构，“学”是不可能的；而任何的“思”，都以差异性的“学”为前提，这一点就不是康德所能知道的，德里达说“我呈现给自己，是在语言之后”，这就有点靠谱了。</p>
+<p>缠中说禅白话直译</p>
+<p>子曰：学而不思则罔，思而不学则殆。</p>
+<p>孔子说：将差异性的“学”与同一性的“思”分开，都只能迷惘、疲怠而无所得。</p>
+<p>（待续）
+严禁抄袭，违者必究</p>
+<blockquote>
+<p>回复</p>
+<blockquote>
+<p>缠中说禅 2007/1/29 15:22:17</p>
+<p>本ID是说到做到的，汉奸要买，高20%把股票买回去。来回几次让汉奸都变负资产！</p>
+<p>今天，本ID的股票该创新高的都创新高的。老8股里，5个创了新高，那药的调整前两天就说了，应该有心理准备。山东人盘子还是比较乱，以前说过了，至少有好几家在里面，不过情况正在好转。至于五指夹东西的，前提走的过快，而且消息的兑现还要等，所以是没必要创什么新高了，除非大盘走得特别好。至于后面说的那五个板块，具体个股就不说了，都应该没问题的。</p>
+<p>目前的大盘，震荡格局的打破好需要一些配合，3000点是否突破其实意义不大，突破了，震荡也少不了，所以短线的把握就比较重要了。当然，如果你技术一般，那就不用太关系短线，先把技术学好再说。</p>
+<p>工行今天已经表现得不错了，但压力还在。联通中线最大的题材就是3G和中移动的回归，一旦中移动真能回归，联通的表现就太值得期待了。当时曾说，钢铁是去年的有色，药是去年的酒，本月两板块的表现都说明了。然后还问什么是去年的银行？当时给了两个条件，一个就是有大型的海龟，中移动能否如期回归，还有一定变数，所以现在大家都是看一步走一步，银行去年也是开始表现得很犹豫，这是比较类似的。</p>
+<p>缠中说禅 2007/1/29 15:24:08</p>
+<p>[匿名] aa</p>
+<p>2007-01-29 14:48:10</p>
+<p>哈哈</p>
+<p>==</p>
+<p>这新浪的系统怎么这样的？本ID还没发帖子就有回帖？</p>
+<p>缠中说禅 2007/1/29 15:30:33</p>
+<p>[匿名] 淡定</p>
+<p>2007-01-29 15:25:28</p>
+<p>谢谢楼主，楼主辛苦啦，楼主给那罗X厮两记响亮大耳光太爽了！</p>
+<p>==</p>
+<p>跳出来的汉奸不可怕，最坏的是深藏的汉奸，突然出手的那种，所以今天走势比较犹豫也是应该的，毕竟一些深藏的汉奸还没完全冒泡。至于那美国人，来到中国的地界，哪里有他说话的地方！</p>
+<p>缠中说禅 2007/1/29 15:32:26</p>
+<p>[匿名] 笨笨猪</p>
+<p>2007-01-29 15:28:34</p>
+<p>前两天看报道，中移动的老总说不是会不会的问题，而是什么时候的问题。看样子回归已经是定局了的样子</p>
+<p>==</p>
+<p>这个自然，但如果太晚，大家的热情也没了，而且和行情的配合也不好，这样就发挥不了最大的作用了，这正是最大的问题所在。当然，自然有人是忽悠他们快点回来，但有些事情，是不可能完全控制的。</p>
+<p>缠中说禅 2007/1/29 15:34:44</p>
+<p>[匿名] 听缠说禅</p>
+<p>2007-01-29 15:28:00</p>
+<p>禅妹，问一个问题：</p>
+<p>一个中枢仅只由3个走势组成吗？如果大于3个，又怎么判断是中枢还是盘整？</p>
+<p>==</p>
+<p>你好象完全没看过已经有的帖子，中枢和盘整根本就是两个不同层次的东西，还有，后面关于中枢的扩展等方面的内容，你好象也完全没看过。</p>
+<p>缠中说禅 2007/1/29 15:41:53</p>
+<p>[匿名] 悠悠悠哉</p>
+<p>2007-01-29 15:36:46</p>
+<p>sina这个系统是破 大姐你到sina的博客主页去查 缠中说禅 会出来个没有文章的主页的</p>
+<p>涨了必盘或跌 …… …… 也是你理论的同一性</p>
+<p>是吧？是理论的依据？</p>
+<p>==</p>
+<p>同一性可不单单是理论的依据，而且还是人存在的一个必然属性，人是趋向与同一性的，例如，能被耳朵所“思”的，就有着同一的属性，也就是属于声音的，同一性是一个深刻的哲学命题</p>
+<p>，没有通常想的那么简单。只要有所“思”，就在同一性里。</p>
+<p>我思故我在，这就以同一性为前提。</p>
+<p>缠中说禅 2007/1/29 15:50:33</p>
+<p>[匿名] 手中无股</p>
+<p>2007-01-29 15:44:24</p>
+<p>lz,请问快速消费品板块还有多大戏？</p>
+<p>===</p>
+<p>这是去年本ID炒烂的板块了，关于这个板块，本ID有不少故事可以说说，有空吧。该板块潜力还有一点，像有些价位还不大高的。对于该板块，今年本ID是以降低仓位为主，特别是那些30元以上的，水酒的情况有点特殊，因此价位毕竟不太高。退出来的钱都是有色、军工等那五个板块去了。</p>
+<p>中线该板块应该还有一定表现的，毕竟现在里面的机构特别是基金特别多。</p>
+<p>缠中说禅 2007/1/29 15:53:36</p>
+<p>对不起，今天回帖错别字有点多，请各位先将就着看，应该不影响意思的。本ID打字只会拼音的，其他不想学了。</p>
+<p>缠中说禅 2007/1/29 15:56:35</p>
+<p>[匿名] 满目山河</p>
+<p>2007-01-29 15:53:30</p>
+<p>缠妹妹，如果要跟你的股票，用什么级别的买点进入合适呢？</p>
+<p>===</p>
+<p>算了，都离开底部了，没必要再买了。其实，这次大跌，用第三类买点的方法可以找到一大堆股票，看看今天创新高涨停的，有不少就是从周五的第三类买点的结束位置起来的。学会了方法，自己都能找到好股票，不一定要跟本ID的，本ID不是庄家，只是经常比庄家还凶狠。</p>
+<p>缠中说禅 2007/1/29 16:00:26</p>
+<p>[匿名] 勇敢的心</p>
+<p>2007-01-29 15:54:33</p>
+<p>缠主你好：我今天在0.392左右攻击了580994.作了两拨，过夜了.请问是否符合第一买点？急盼中……</p>
+<p>===</p>
+<p>注意 ，没必要对这些已经快停牌的再介入，别赌徒心理太重，有机会先出来吧。就算有最好的技术，还是先把风险放在第一位，市场中最大的风险就是没时间让你改错，让错成为永远。在市场里，复利的力量是最大的，只要有好的心态与技术，复利是必然的，这就可以战胜一切。</p>
+<p>缠中说禅 2007/1/29 16:02:16</p>
+<p>对不起，本ID又要去一趟那某类人最多的街道，最近有些事情在那里有些安排，所以经常又去看看，晚上回来再说了，再见。</p>
+</blockquote>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../wenshizhexue/gsyqjkzdr48.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../wenshizhexue/gsyqjkzdr50.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../wenshizhexue/gsyqjkzdr48.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../wenshizhexue/gsyqjkzdr50.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

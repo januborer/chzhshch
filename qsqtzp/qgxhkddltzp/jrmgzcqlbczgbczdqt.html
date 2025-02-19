@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>假如美国再次侵略北朝，中国不参战的前提（请放行） - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="假如美国再次侵略北朝中国不参战的前提请放行"><a class="header" href="#假如美国再次侵略北朝中国不参战的前提请放行">假如美国再次侵略北朝，中国不参战的前提（请放行）</a></h1>
+<p>小女子认为，假如美国再次侵略北朝，中国可以不参战，但必须同时满足以下前提：</p>
+<p>一、美国必须明白，朝鲜问题和其他问题不同，38线上流过无数中国人的鲜血，任何希望不通过中国人的同意跨越38线的行为都将视为对中国的侵犯。</p>
+<p>由于38线其实是一条停战线，从某种意义上，战争一直都没有结束，因此任何主动穿越38线的行为都可以看成是战争的延续。当然，战争可以打着打着位置互换，象三国里面一样。只要有足够的利益，中国也可以站在美国一边。但是，任何希望不通过中国人的同意跨越38线的行为都将视为对中国的侵犯。要通过38线，必须给予中国相对应的利益，否则没门。任何不尊重38线上流下的无数中国人鲜血的人，中国人也绝对不会尊重他们。要过可以，必须留下买路钱。</p>
+<p>二、美国必须无条件支持中国对台湾的统一。</p>
+<p>可能有人要说，这是两件事情。但这世界上没有什么是两件事情，站在中国国家利益上，这就是一件事情，一个筹码的交换。有时候就应该学会把水搞混，不管什么派，参与国际竞争中，就必须要有中国自己的声音，必须要争取中国自己的利益。如果中国方面连这个都做不到，整天给人牵着鼻子走，那还强什么国？如果以前那些离中国还很远，在北朝问题上，中国作为有影响力的一方，必须在这里寻找自己利益的实现。因此，台湾问题必须要和北朝问题连在一起。</p>
+<p>历史上这两个问题本来就是相关的，如果不是历史上的那场朝鲜战争，台湾可能早已经不是问题。站在地缘的角度，这两个地方刚好是中国向外的两个触点，必须保持至少其中一个的存在，否则就给憋死了。站在这个角度，无论如何都要通过北朝问题把水搞混从中牟利，必须明确、强硬地告诉美国：北朝和台湾，你只能控制一个，你弄北朝，我们就要弄台湾。</p>
+<p>三、美国在战争中绝对不能有误炸以及对自然环境产生重大影响</p>
+<p>就是美国在战争中绝对不能有误炸以及对自然环境产生重大影响。由于朝鲜离中国太近，在伊拉克中，伊朗也无端挨了几个炸弹，而中国人没有挨炸弹的毛病，一旦出现所谓的误炸，就只能看成是一种挑衅，必须还击，所以美国想中国不卷入，必须不能有误炸；其次，由于美国的炸弹都很脏，这辐射那辐射的，而且在每一次美国的战争后都有强烈地震，一旦发生这种因为美国的战争引起的自然环境变化，美国应该给予中国足够的赔偿。</p>
+<p>四、中国有向北朝提供武器的权利</p>
+<p>这一点没什么好说的，市场经济，如果北朝有钱或者中国有些武器过期懒得花钱烧毁和保管，中国就可以按自己的意愿向北朝提供武器。</p>
+<p>五、战后必须保证中国在新朝鲜中的所有经济、政治利益。</p>
+<p>这也没有什么好说的，中国历史上对朝鲜的影响，大概美国也不应该不知道，那就继续保持传统，中国人自称自己热爱传统，所以这个传统必须保持。</p>
+<p>六、中国必须参与战后维和，美军在战后必须有一个短时间全面撤出朝鲜的时间表，而日本必须大幅减低目前军事方面的开支且在日美军也应该逐步减少。</p>
+<p>美军的存在随着朝鲜的统一将没有任何理由，而日本目前偷偷增加军力，其借口也是朝鲜问题（其实大家都明白不是，但很多东西就应该装糊涂来玩），一旦朝鲜问题解决，也就有了压制日本的理由。</p>
+<p>总之，小女子认为，在国家的游戏中，不能总跟着别人的思路玩，中国一定要有自己的声音，特别在朝鲜问题上，中国一定不能退让。美国可以再次侵略北朝，中国可以不参战，但必须同时满足上面的前提。在朝鲜问题上，中国不仅必须有所作为，而且应该尽全力去赢取最大的利益。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../qsqtzp/qgxhkddltzp/sxwyrgnzydxsjsdqzclcrcw.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../qsqtzp/qgxhkddltzp/lygzxgdmggdddmgrsbpsmwmnrnpglqhlwwm.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../qsqtzp/qgxhkddltzp/sxwyrgnzydxsjsdqzclcrcw.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../qsqtzp/qgxhkddltzp/lygzxgdmggdddmgrsbpsmwmnrnpglqhlwwm.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../../ace.js"></script>
+        <script src="../../editor.js"></script>
+        <script src="../../mode-rust.js"></script>
+        <script src="../../theme-dawn.js"></script>
+        <script src="../../theme-tomorrow_night.js"></script>
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

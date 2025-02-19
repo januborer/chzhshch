@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>这些都是“康乾盛世”中发生的一幕幕 - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="这些都是康乾盛世中发生的一幕幕"><a class="header" href="#这些都是康乾盛世中发生的一幕幕">这些都是“康乾盛世”中发生的一幕幕</a></h1>
+<p>乾隆，这位清朝居第二圣明的圣君。在位期间六次南巡，都是彰显盛世风光的盛举。每一次都是浩浩荡荡数千人队伍，每到一处，地方官员就要建起行宫，纷纷献上奇珍异宝以邀宠，备好美味佳肴以款待数千人的队伍。道傍破旧民房，因为有碍观瞻，都被勒令拆除，致使大批黎民流离失所。乾隆第一次南巡之后，有人假托工部尚书孙嘉淦之名写文章进行指责并私下流传，乾隆帝竟然兴起大狱进行追查，牵连下狱达上千人。据说湖州知州赵某闻知乾隆将赴湖州，急中生智，把船沉在河中阻塞河道，终于阻止了乾隆游幸的队伍，后来赵某离任，湖州百姓相送数十里。</p>
+<p>乾隆第一次南巡经过山东，其时山东河南发生特大水灾。有个叫彭家屏的官员向他描述灾情，乾隆反而大怒，斥责彭家屏所言不实。后来在途中乾隆终于目睹了灾民流离失所的惨状，据说“上为动容”，然而玩了一转回到北京之后他却把彭家屏叫去，问他家里有没有“禁书”？彭家屏回答虽然有几本明朝野史，却未曾检阅，乾隆斥责他不老实。登时下狱，抄家。然后宣布抄得彭家家谱，里面对皇帝的名字没有避讳，“狂悖无君”。这个彭家屏就被莫名其妙的杀掉了。</p>
+<p>乾隆皇帝自称“南巡之事，莫大于河工。”，然而他六次南巡三十多年间，河南黄河八次决口，灾民四处流散，他到处游山玩水，祸及大半个中国，却总算有点自知之明，一次也没去过河南。</p>
+<p>这些都是“康乾盛世”中发生的一幕幕。</p>
+<p>清朝康熙皇帝是个天才的皇帝，清朝官方档案《实录》里面记载他勇武无敌，出去打猎，一天就能打死两只老虎，一次打猎几天下来就能打死八只老虎。他的孙子乾隆说他：“圣祖神勇无锡，力能挽强，并用二十把长箭，臣下罕有及者。”“猛如虎、健如熊、捷如兔，亦往往一发殪之。”</p>
+<p>另一方面他又是个文质彬彬的鸿儒，博古通今，堪为一代宗师。那个进行大量游猎活动的人又不复存在了，而是“听政之暇，无间寒暑，唯有读书写字而已。”</p>
+<p>当然还有品德高尚，他的儿子雍正说他“服御之物，一惟质朴”，“思慕圣德，实无终矣。”</p>
+<p>简直是文成武德，圣明得到了极点。如此完美的人真的存在过吗？不幸的是清朝在伪造篡改隐瞒历史事实方面是有传统的。康熙初年，庄廷龙修《明史》，庄家一族全部被屠。过了些年有个戴名世又忘记了，编了一本《南山集》，收录了一些明末清初史料。康熙帝勃然大怒，就把戴名世杀头了。《南山集》里引用了死掉的方孝标留下的一些史料，方家活着的人也全部被流放黑龙江。乾隆皇帝修《四库全书》，全国图书都要进献检查，不仅不利清朝的文献被禁毁，连前人涉及辽金元的文字都要进行篡改。查缴禁书竟达三千多种，十五万多部。</p>
+<p>文字狱如此之彻底，一本《扬州十日记》，一本《嘉定屠城记略》，竟在中国本土湮灭二百多年，二百多年后才从日本找出来。</p>
+<p>明朝也有官方档案《实录》，记了这麽一件事，明世宗嘉靖皇帝，残暴不仁，宫女们不堪忍受，半夜里要勒死他，谁知只是勒昏过去，他又活了过来，可怜这些宫女当然是活不成了。还有嘉靖与皇后对坐闲谈，有妃子进来献茶，嘉靖当场就把妃子拉过来抚摸，皇后当然吃醋，谁知嘉靖登时大怒，活活就把这个皇后吓得堕胎死了。这些宫闱丑事都被明朝史家一一记录下来，几百年之后还在大暴明皇室之丑。</p>
+<p>比较一下吧。明朝皇帝固然也不是什么好东西，然而明清两朝修史的精神相去岂止天壤！在这麽两种修史精神的指引下，明朝皇帝多恶劣是必然的，而清朝皇帝难道还能有不英明神武，远迈前代的道理？</p>
+<p>清朝，一个如此残暴、黑暗、专制达到中国历代王朝顶峰的朝代。一个无论肉体屠戮，还是精神摧残都登峰造极的朝代。皇帝的好坏本是次要的。然而在这样一个朝代，有骨气的人都被杀光了。中国传统的为官应直言敢谏，为史应秉笔直书的观念被彻底摧毁，只剩下阿谀奉承的奴性跟辫子一起留了起来。在沉重的黑幕下，除了文字狱的酷烈被清清楚楚的记录下来，为了以儆效犹之外，还不知道有多少无边的血泪被无情地埋没了呢！这个朝代最大的成就和骄傲就是捏造篡改历史的本领前无古人，竟然在百年之后还能让后人们心甘情愿的相信这个如此黑暗邪恶的时代是前代不可企及的“盛世”，这个如此黑暗邪恶时代的统治者都是些“好皇帝”。清朝皇帝如有知，当由衷叹服自己果然伟大圣明。</p>
+<p>[此贴子已经被作者于2003-6-8 22:22:35编辑过]</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../qsqtzp/qgxhkddltzp/zbqqhbjxdayhymqyyxdayhsfyjdlszzs.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../qsqtzp/qgxhkddltzp/gymgyzydzq.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../qsqtzp/qgxhkddltzp/zbqqhbjxdayhymqyyxdayhsfyjdlszzs.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../qsqtzp/qgxhkddltzp/gymgyzydzq.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../../ace.js"></script>
+        <script src="../../editor.js"></script>
+        <script src="../../mode-rust.js"></script>
+        <script src="../../theme-dawn.js"></script>
+        <script src="../../theme-tomorrow_night.js"></script>
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

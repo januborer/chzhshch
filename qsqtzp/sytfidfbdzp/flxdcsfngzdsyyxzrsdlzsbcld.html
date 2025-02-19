@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>[法兰西大菜师傅]，你构造的所有有限自然数的例子是不成立的。 - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="法兰西大菜师傅你构造的所有有限自然数的例子是不成立的"><a class="header" href="#法兰西大菜师傅你构造的所有有限自然数的例子是不成立的">[法兰西大菜师傅]，你构造的所有有限自然数的例子是不成立的。</a></h1>
+<p>[法兰西大菜师傅]还是一个很有心的人，他构造了一个所有有限自然数的例子，然后用他所理解的缠女士的对角线法来证明不是所有自然数都是有限的，从而来证明缠女士犯了错，但他的证明是不对的，先把他的引用如下：</p>
+<p>“所有自然数都是有限的。这个结论你是否接受？
+[法兰西大菜师傅] 于 2006-08-10 11:49:10上贴</p>
+<hr />
+<p>但是禅女士能证明他错误。
+反证法：假设论题成立，所有有限的自然数能组成一个集合A，
+构造一个数：a1+a2+a3+a4……
+这个数一定不等于A中任何一个数，也是自然数，矛盾。所以不是所有自然数都是有限的。
+看出来问题在哪里吗？
+看明白，你就明白为什么我的书有无穷多本了。 ”</p>
+<p>但他这个证明是不对的，逐一说明：</p>
+<h1 id="反证法假设论题成立所有有限的自然数能组成一个集合a"><a class="header" href="#反证法假设论题成立所有有限的自然数能组成一个集合a">反证法：假设论题成立，所有有限的自然数能组成一个集合A，</a></h1>
+<p>这个集合A的元素个数是无限的，证明很简单，假如集合A元素个数是有限的，那么可以找到最大的元素N，而N+1也是有限的自然数，这就和所有有限的自然数能组成一个集合A矛盾，所以集合A的元素个数无限。</p>
+<h1 id="构造一个数a1a2a3a4"><a class="header" href="#构造一个数a1a2a3a4">构造一个数：a1+a2+a3+a4……</a></h1>
+<p>由于上面的集合是无限的，所以这个数一定在A里，</p>
+<h1 id="这个数一定不等于a中任何一个数也是自然数矛盾"><a class="header" href="#这个数一定不等于a中任何一个数也是自然数矛盾">这个数一定不等于A中任何一个数，也是自然数，矛盾。</a></h1>
+<p>所以你不能推出这个结论。</p>
+<p>而缠女士那证明和这个根本不同，她首先用量子力学和宇宙的有限来证明集合A有限，然后她构造的命题也满足有限的要求，但不在集合A里，所以要理解缠女士的证明，还要花点工夫。</p>
+<p>[法兰西大菜师傅]，你的书无穷不了</p>
+<p>我们按按照规则，先把[法兰西大菜师傅]关键部分完全引用如下：</p>
+<p>“把人类所有可能的，不可能的话都罗列出来。
+如果用英文，首先是1个字母的
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+i
+l
+m
+n
+o
+p
+q
+r
+s
+t
+u
+v
+w
+x
+y
+z
+第一集就这26本了，第二集有26*26本。
+aa
+ab
+……
+zz
+依次类推。我的书一共有26+26^2+26^3……这么多。可以证明这个长度是可列无穷的。”</p>
+<p>请注意，这位大师傅又犯了想当然的错误：“可以证明这个长度是可列无穷的”，学过数学的都知道，数列26+26^2+26^3……要无穷，必须是这个序列是无穷的，也就是这大师傅假设的书是无穷的。那么，人类可以出无穷的书吗？显然不可以。证明如下：</p>
+<p>因为宇宙是有限的，而人类出一本书的速度不可能无限短，这里的理由是根据量子力学的原则，假设宇宙的寿命是A，人类出书的最短间隔是B，那么人类出的书少于A/B（因为人类至少在过去的几十亿年没出过书），A/B只是一个有限的数，所以人类不可以出无穷的书</p>
+<p>对A/B取整，设为N。按照这位大菜师傅的公式：26+26^2+26^3……+26^N的长度也是一个有限数，也就是说，他宣称的可以证明这个长度是可列无穷的是错误的，所以他的论证无效！</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../qsqtzp/sytfidfbdzp/zcbtrhrhygzttsmsjz.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../qsqtzp/sytfidfbdzp/wdygxxjyzltsdjygzjzsblgf.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../qsqtzp/sytfidfbdzp/zcbtrhrhygzttsmsjz.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../qsqtzp/sytfidfbdzp/wdygxxjyzltsdjygzjzsblgf.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../../ace.js"></script>
+        <script src="../../editor.js"></script>
+        <script src="../../mode-rust.js"></script>
+        <script src="../../theme-dawn.js"></script>
+        <script src="../../theme-tomorrow_night.js"></script>
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>教你打坐26：基于你与你的完全分类 - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="教你打坐26基于你与你的完全分类"><a class="header" href="#教你打坐26基于你与你的完全分类">教你打坐26：基于你与你的完全分类</a></h1>
+<blockquote>
+<p>2008/3/1 10:46:38</p>
+</blockquote>
+<p>上周用列宁物质定义的例子说明了，任何关于这世界的所谓定义，最终都必然导致上帝式概念，例如，你不说物质，那你就要说客观实在，你不说客观实在，就要说其他概念，总之，这个无聊的游戏没有尽头，除非你把一个概念上帝式地变成一个不被定义的概念作为起源，而这一切，都不过是人意识的无聊自渎。</p>
+<p>而“你”所能面对的，不过都是“你”能所面对的，任何一个人，都不可能找出任何一样东西是他所能面对又不是他能所面对的；反之，你能所面对的，也必然只能是你所能面对的。你的能与所，都在“你的”世界中，你不过在这个“你的”世界中自渎而已。</p>
+<p>这世界上有这么一般蠢人，被概念语言所迷惑，在概念与语言的迷宫里打转，整天这主义那主义的，而所有这一切，都离不开“你”和“你的”。</p>
+<p>那么，对于这个“你”和“你的”，一切概念定义的把戏都是无效的，这里，唯一可行的，只能是分类，完全的分类。</p>
+<p>任何分类，都必须有一个分类的基础，那么，对于“你”与“你的”分类基础，只有一个，就是当下你的这个肉体。这个肉体，从你出生开始到你的死亡，都是与你最接近的，在任何可以脱离肉体的存在可以存在之前，或者说，除非你能进入一个完全脱离各种形式肉体的世界，否则，这个分类的基础就必然当下地存在着。</p>
+<p>注意，这个肉体包括了所谓的精神，肉体与精神的分裂不过是基督教世界的闹剧。</p>
+<p>那么，“你的”肉体与精神如何提供了一个当下的分类原则？眼、耳、鼻、舌、身、意，这六个分类的基点，就完全地囊括了“你的”肉体与精神的所有一切，你找不出任何与这六点无关的部分。</p>
+<p>以这六个基点开始，就可以把“你的”世界进行完全的分类：每个基点，都可以一分为三，一个是这基点的物质器官，也就是所谓的“根”，一个是于该“根”对于的外部现象，也就是所谓的“尘”，例如，对于眼根来说，所有能被眼睛所反映的现象，都归于所谓的“眼尘”，当然，一般不这样称呼，一般都用“色”来表示这个分类；根与尘作用，就产生了识，例如，你用眼睛看一朵花，然后你就产生了花这个形象，这就是“眼识”，当然，一般一个形象的产生，都有意识的参与，单纯的“眼识”，如果没有打坐的工夫，一般是不知道的。</p>
+<p>因此，对“你的”世界，就有了这样一个完全的分类：
+眼	耳	鼻	舌	身	意
+色	声	香	味	触	法
+眼识	耳识	鼻识	舌识	身识	意识</p>
+<p>这十八界，就是一个完全的分类，任何一个人，任何一个当下，任何一个“你的”世界里的任何一点东西，都逃不过这个分类，都必然落在这个完全的分类里面。没有任何人能举出任何一个反例。</p>
+<p>当然，对于一般的人来说，这十八界里的很多界都其实不大熟悉，或者尽其一生都不知道，但这并不影响任何问题。</p>
+<p>这个分类，是一个一般层面的分类，或者，一定要用某种角度性的语言，那就是横的分类。</p>
+<p>至于纵的分类，就是所谓的“五蕴”了：色、受、想、行、识。但这个分类，一般人很难理解，更很难认识，没有打坐的基础，基本都是在概念上臆测。可以这样说，我们都在“五蕴”中闹腾，但“受、想、行、识”的境界，一般人连梦都梦不到，一般人也就在“色”蕴的粗分部分闹腾，所谓的科学之类都是这样。</p>
+<p>这个级别有多高远，我们可以把其中的层次说明一下：一般的人都生活在散乱状态，这个状态到初禅的状态有N个电子轨道的跳跃。注意，初禅的状态不是你的什么心理状态，而是一种现实的世界状态，我们现在的世界是散乱状态的世界。</p>
+<p>我们现在的世界，就如同蚂蚁，而初禅的世界，就如同人类。用现在的世界去否定初禅的世界，就如同蚂蚁否定人类的存在一样可笑。初禅的世界，里面当然有着完全不同的物理系统与数理系统，这有什么可奇怪的。</p>
+<p>但初禅的世界，本身就分了不同的N个层次，不同的层次之间，有着不同的跳跃，低层次的连梦也梦不到高的状态，就像蚂蚁梦也梦不到人类的高科技一样。</p>
+<p>但这些细分的层次就不说了，跳跃过了这些细分的层次，有一个总的大的跳跃，就到了二禅的世界，如此，一直上去，四禅八定，到非想非非想的世界，这时候，依然没有走出“想”蕴，连“行”蕴的边都没有梦到。</p>
+<p>现在的无聊人，整天念“五蕴皆空”，那是耍嘴皮子，没用，你连“色”蕴的粗分部分还没完全梦到，空什么空？</p>
+<p>修行不是耍嘴皮子的事情，最低的标准就是用你整个生命去突破生死这个困局。而且，就算你能了生死了，也就是切实地不被生死所困，依然不是修行的最终，那只是一个起点。</p>
+<p>任何耍嘴皮子的，根本没资格谈论打坐修行。而真打坐修行的，也没必要去耍这嘴皮子，你面对的是如此宽广的未知世界，你现在看到的粗分世界连其中的一亿亿亿亿亿亿亿亿万分之一都不及，有什么值得耍嘴皮子的？</p>
+<p>这世界上什么最可贵，就是一个真的修行人，这是一切帝王圣人英雄思想家科学家都不能比的，因为他们征服的所谓世界，不过是最粗分的部分，而修行，就是深入到这个世界的最幽深之处。</p>
+<p>当然，现在的世界，觅一个真修行人，肯定是这世界上最难的事情了。</p>
+<p>修行、打坐如何入手，就从这分类入手，从十八界入手。</p>
+<p>但且住，大德，眼处见色、耳处见色且不说，眼处闻声作么生？</p>
+<p>参！</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chzhshch/jiaonidazuo25.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../chzhshch/jiaonidazuo27.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chzhshch/jiaonidazuo25.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../chzhshch/jiaonidazuo27.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

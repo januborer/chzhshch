@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>《论语》详解：给所有曲解孔子的人（68） - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="论语详解给所有曲解孔子的人68"><a class="header" href="#论语详解给所有曲解孔子的人68">《论语》详解：给所有曲解孔子的人（68）</a></h1>
+<blockquote>
+<p>2007/8/28 21:57:19</p>
+</blockquote>
+<p>68</p>
+<p>子曰：君子周而不比，小人比而不周。</p>
+<p>杨伯峻：孔子说：“君子是团结，而不是勾结；小人是勾结，而不是团结。”</p>
+<p>钱穆：先生说：“君子待人以忠信，但不阿私。小人以阿私相结，但不忠信。”</p>
+<p>李泽厚：孔子说：“君子普遍厚待人们，而不偏袒阿私；小人偏袒阿私，而不普遍厚待。”</p>
+<p>详解：这三种解释，都是典型的胡解，根本没有从“周”和“比”的原始意思着手。后人解前人文字，最大忌讳就是把一些当时根本没有的字义附会上去。句子意思可以引申，但字义一定不能胡来，这是最基本的要求。</p>
+<p>这章的根本就两字：“周”和“比”。何谓“比”？“比”在甲骨文里是两人步调一致、比肩而行，典型的象形字；“周”，甲骨文里是“田”里有四点，表示把田里都种满了，因此就有周遍而没有疏漏的意思。</p>
+<p>那么，什么是“君子周而不比，小人比而不周”呢？字面意思就是，君子所见所闻所知所行周遍而没有疏漏，但不会让别人和自己步调一致、比肩而行；而小人，总是希望别人和自己步调一致、比肩而行，但所见所闻所知所行却不能周遍而没有疏漏。</p>
+<p>这里很明显，孔子认为，所有小人的一个很大的共同点，都是希望别人和自己步调一致、比肩而行，为什么？小人，被一个“我“所牵制，他自己的行为、见解，都不过是那个“我”的造作，永远和那“我” 步调一致、比肩而行，因此，这种内在的品行自然就推而广之，希望任何人都和“我”一样，所有人的利益都为“我”而来，诸如此类的。</p>
+<p>任何希望和自己步调一致、比肩而行的学问、宗教、理论等等，都是小人之学。例如所谓的基督教、道教之类的玩意，立一个上帝、道，然后让人去步调一致、比肩而行，这就是典型的小人之学。</p>
+<p>君子之学，不同而大同，不需要什么步调一致、比肩而行。这世界有无数种花，怎么可能让每种花都步调一致、比肩而行？看看马克思的《评普鲁士最近的书报检查令》，就知道，东西方君子之间思想的共鸣。</p>
+<p>君子，所见所闻所知所行周遍而没有疏漏，君子不会预先设定一个框框，戴有色眼镜甚至脚镣去知去行，只会从当下的现实出发，全面地收取所有的材料，对所有材料“不相“之，这些材料，包括社会的所有方面，从经济基础到上层建筑、从精英面首到面首精英，从生老病死到奸淫虏虐，一事不知，儒者之耻。</p>
+<p>只有了“周”，才可能“不比”，面首的世界只有来面首的和被面首的，小人的世界只有小人。君子的世界，不光有君子，里面还有面首、小人。君子，没有世界，君子的世界，只是世界本身而已。世界“不知”，君子“周”其“不知”而“不相”之，转“不知”之世界为“不愠”之世界，而君子，本无能转所转。就如同阳光普照，无所谓照物，而物得阳光而自彰，阳光本无能彰所彰。</p>
+<p>缠中说禅白话直译</p>
+<p>子曰：君子周而不比，小人比而不周。</p>
+<p>孔子说：君子，见闻学行周遍而没有疏漏，却不会让别人和自己步调一致、比肩而行；小人，让别人和自己步调一致、比肩而行，见闻学行却不能周遍而没有疏漏。</p>
+<blockquote>
+<p>回复</p>
+<blockquote>
+<p>缠中说禅 2007/8/28 22:04:54</p>
+<p>对不起，新浪有点问题，文章发出不太顺利，多余的已经删除。</p>
+<p>先下，再见。</p>
+</blockquote>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../wenshizhexue/gsyqjkzdr67.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../wenshizhexue/gsyqjkzdr69.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../wenshizhexue/gsyqjkzdr67.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../wenshizhexue/gsyqjkzdr69.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

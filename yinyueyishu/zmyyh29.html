@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>周末音乐会29：没有音乐的声乐时代 - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="周末音乐会29没有音乐的声乐时代"><a class="header" href="#周末音乐会29没有音乐的声乐时代">周末音乐会29：没有音乐的声乐时代</a></h1>
+<blockquote>
+<p>2007/2/24 15:19:35</p>
+</blockquote>
+<p>在一个毫无冬天气息的冬日假期，游逛山间，疗治一下山水顽疾，即便没有明月清风，只有一场让北中国无处可逃的迷天大雾，也是一件无可抱怨的事。没有山水的山水，也会让人慵懒。一个几无收获的假期，除了一首以中国百年某些烂事为题的千言百韵长律，就只写了不到十首的艺术歌曲，歌词包括：穆旦写于1976年3月的《智慧之歌》、黄翔写于1962年的《独唱》、北岛的《宣言》、海子写于1989年2月2日的《黑夜的献诗》等。</p>
+<p>从十几岁就开始的艺术歌曲创作，最开始时，歌词用的多是外国的诗歌，包括莎士比亚、歌德等等，十八岁，就为哈姆雷特那著名的独白谱曲，现在唱来，还是那么令人激动。中国诗人，写的不多，10几岁时，谱过《再别康桥》之类二、三十年代的诗歌，当代诗歌基本很少涉及。当时，基本都在调性的范围内展开，总觉得用调性的东西处理当代诗歌，有点太单纯了。而当时，对无调性如何把握声乐线条，有点吃不准，而中国的艺术歌曲创作，基本停留在最原始的阶段，基本没有可借鉴的地方。</p>
+<p>后来，终于摸索出一套根据诗歌情绪，从调性到无调性之间顺畅转换的方法，这样音乐表现的能力与范围就可以无限扩展了，从那开始，才可以自由地处理现代的诗歌。但却又遇到一个暂时无法克服的困难，找不到适合的声音。本ID所写的艺术歌曲，都是极难演唱的，需要一种全能的声音，一种从低音到中音再到高音都能完全胜任的戏剧性声音，同时又是一种最明亮、温暖的抒情性声音，不同的声区、音色，都能自如地转换，在任何声区从最抒情的半声到最戏剧性的宣叙都能无缝地转换。这个时代，一个没有音乐的声乐时代，哪里去找这样的声音？其实，本ID自己也不断一直在摸索、训练。本ID一直都奇怪，怎么中国的美声训练就没弄出一个好一点的戏剧性声音来，满大街都是毫无力度、矫柔造作的伪抒情声音。自己的作品，最终大概只能自己来演唱了。</p>
+<p>其实，无论男声、女声，历史上都有一些伟大的声音是那么令人神往，可惜这个时代，无论中国、外国，都不再拥有。本ID最厌烦就是那商业乱炒的所谓三高，他们算个什么？比比卡罗索，他们不觉得自己丢人吗？现在的声音，所谓的戏剧性，都是闷在腔体里或是令人不快的挤压，而所谓抒情又毫无力度、厚度可言，为什么现在就没有卡罗索这样的声音？本来唱中音的他最终成为上世纪最伟大的男高音，而同时还可以出色地演唱男低音的角色，无论男声、女声，怎么这样的声音现在就都一下没有了？一个可怜的时代，一个靠着电声、技术处理还是鸭子嗓满大街晃悠的时代，一个人人唱歌而没有歌唱的时代，一个只适合叫床的声音时代。</p>
+<p>现在，就让我们听听那个伟大的声音在1902年到1903年留下的痕迹。能把这声音留下来，无论录音技术此后产生多少罪恶，都可以被赦免了。一个充满噪音的录音，一个伴奏乐器的声音都已变形的残留，但伟大的声音，穿越了时代、穿越了时间的腐蚀，依然那样无暇、那样熠熠生辉。</p>
+<p>上传音乐的时候才发现，该网站出毛病了，不能发新的文件，只能等等，晚上或明天再补上。抱歉。</p>
+<blockquote>
+<p>回复</p>
+<blockquote>
+<p>缠中说禅 2007/2/24 15:22:09</p>
+<p>上传音乐的时候才发现，该网站出毛病了，不能发新的文件，只能等等，晚上或明天再补上。抱歉。</p>
+<p>刚从山里回来，又要重新一些不可少的应酬，晚上、明天都有些聚会，不能和各位多聊了。</p>
+<p>先下，再见。</p>
+<p>缠中说禅 2007/2/25 13:19:56</p>
+<p>刚上来发现那音乐播客网站依然不能上传，大概这假日综合症还要延续，只好请各位耐心等待。</p>
+<p>至于有人问如何把本ID播客里的音乐放到自己的文章里，这很简单，每个音乐文件下都有播放器调用，按一下有引用通告，把该日志播放器HTML调用代码复制下来放到文章的源代码里就可以。不过，播放器调用必须在该播客里注册才行。</p>
+<p>下午还有应酬，不能上传，只能把背景音乐换一个新的，先下，明天下午收盘见。</p>
+</blockquote>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../yinyueyishu/zmyyh28.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../yinyueyishu/gcjs.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../yinyueyishu/zmyyh28.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../yinyueyishu/gcjs.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

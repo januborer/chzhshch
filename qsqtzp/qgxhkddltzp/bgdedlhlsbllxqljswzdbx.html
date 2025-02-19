@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>把哥德尔定理和罗素悖论联系起来就是无知的表现 - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="把哥德尔定理和罗素悖论联系起来就是无知的表现"><a class="header" href="#把哥德尔定理和罗素悖论联系起来就是无知的表现">把哥德尔定理和罗素悖论联系起来就是无知的表现</a></h1>
+<p>最近有几位不死心，总是想用哥德尔不完全定理抓小女子马脚，可惜这帮人自己不懂，又找一些乱七八糟的人，什么所谓的印度专家、蹩脚的科普作家。今天下午小女子没事，就用尽量通俗的语言和这几位上上课，但小女子从来没有当过老师，更没教过幼儿园，所以有什么不耐心的地方就先请各位小男孩原谅。</p>
+<p>但小女子无论如何没有耐心从婴儿班的集合概念说起，所以有关集合的问题就不说了。所谓罗素悖论，就是谈论有关所有集合的集合时出现的问题。因为在罗素悖论发现之前，人们都是随便谈论集合，罗素悖论指出这样的谈论会引发矛盾。而罗素悖论只要通过对集合公理化的方式就可以避免，其主要的出发点就是不允许谈论罗素悖论里涉及的诸如所有集合的集合之类的东西，在集合公理化里，集合再不是一种无须定义的东西，而是被一大套公理所规定的东西，在这一大套公理之下，罗素悖论就不再存在。所以说，罗素悖论并不是什么大不了的事情。</p>
+<p>而哥德尔不完全定理的背景和罗素悖论根本不同。现在的人一般只知道哥德尔不完全定理，但有一个哥德尔完全定理可能知道的人不多。这个定理主要是证明了一阶谓词系统的完备和无矛盾。不太严格地说，完全就是完备加无矛盾，完备就是在这个系统里的任意一个命题都是可判断的，也就是说可以说出真假；而无矛盾就是这个系统不能推出任何两个相反的命题，一般都可以归结为推不出1=0这样的结论。而哥德尔完全定理就证明了一阶谓词系统就是一个完备和无矛盾的系统。</p>
+<p>由于非欧几何的出现，使得数学系统完备和无矛盾的证明变得十分重要，而通过一大堆人的努力，这种东西都可以归结到算术系统的完备和无矛盾性上来。所谓算术系统，对于一般人可以大概理解成就是整数和加法运算（乘法和减法都可以通过加法定义，对于整数环，除法可以不考虑）。</p>
+<p>也就是说，只要证明了算术系统的完备和无矛盾性，整个数学，包括整个科学（因为物理学其实也是可以公理化的，本质上是数学的一个分支）都有一个严格的基础。由于一阶谓词系统就是一个完备和无矛盾的系统，而算术系统是非形式系统中最简单的，整个世界就看这最后一步了。可惜成也萧何、败也萧何，竟然又是这个破哥德尔，他竟然证明了任何一个包括了算术系统的非形式系统都是不完全的，也就是说完备加无矛盾不能够同时成立。这个家伙的可恶在于，他首先点燃了全世界人的希望，然后再把这个希望毁灭给全世界看，虽然这样使得爱因斯坦也对他必恭必敬，但最后他好象是饿死的，也算天网恢恢了。</p>
+<p>由于这样，把数学归于形式系统，也就是逻辑的想法彻底破灭，反而使得大家明白，逻辑只是整个数学游戏的一部分，逻辑有无数种，只是每个人的爱好不同。例如有些数学家就不承认实数和排中律，而这并不说明他们比承认实数和排中律的人古怪，只是爱好不同。当然，大多数人都承认实数和排中律，因为有了实数和排中律，这个游戏好玩很多，如此而已。</p>
+<p>更重要的是，上帝不存在了，即使在一个局部的非形式系统中，上帝也不存在。任何一个非形式系统，或者有不可判断的命题、或者有矛盾的命题，这和能力无关。有些一知半解的人说什么数学不严密了，什么什么丧失了，其实根本就不明白什么回事。数学依然严密，只是上帝不存在了，全知全能不存在了，如此而已</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../qsqtzp/qgxhkddltzp/ysxxswdbdqgltzpsxdjm.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../qsqtzp/qgxhkddltzp/wsmygclbcdtzjrddyzdhc.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../qsqtzp/qgxhkddltzp/ysxxswdbdqgltzpsxdjm.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../qsqtzp/qgxhkddltzp/wsmygclbcdtzjrddyzdhc.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../../ace.js"></script>
+        <script src="../../editor.js"></script>
+        <script src="../../mode-rust.js"></script>
+        <script src="../../theme-dawn.js"></script>
+        <script src="../../theme-tomorrow_night.js"></script>
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>《玩一次长的 54韵兼答garychangguo，嘘堂等》释 （仅供学术研讨） - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="玩一次长的-54韵兼答garychangguo嘘堂等释-仅供学术研讨"><a class="header" href="#玩一次长的-54韵兼答garychangguo嘘堂等释-仅供学术研讨">《玩一次长的 54韵兼答garychangguo，嘘堂等》释 （仅供学术研讨）</a></h1>
+<blockquote>
+<p>小人</p>
+</blockquote>
+<p>（上面那带英文字母的长诗曾在某论坛引起麻烦,后写了一个解释,现在转贴一下以免又引起不必要的麻烦.）</p>
+<p>现在将要讨论的东西是为消除误会而作，但相信曾在这里引起的误会并不会因此消除。误会，可能来自代沟。小人属于那种看周星弛最无厘头电影都会哈哈大笑的一族，而这里很多先生的年龄是小人的2到3倍，产生误会就很自然了。代沟带来的趣味和思想的差异在现实中已经表现无余，在虚拟的空间，这种差异也随之突现。</p>
+<p>回到诗本身。小人虽然草包，但对于从《弹歌》、《击壤》开始的诗教传统也有大概的了解，各代夫子们的箴言也略知一二，而这并不会给小人带来任何压力。 “唐风连宋雨，千年竟未晴”———小人曾写在版上的两句，也是小人对这方面问题的回答。历史是充满漂浮符号的涂鸦，不是缚已更为缚人的绳索。</p>
+<p>至于道德方面的问题，虽然中国文人早有“升堂风雅颂，拥被金瓶梅”的传统（否则现在很多出版社也无缘用“N大X禁书”等骗钱），虽然金斯伯格等人诗篇里充满的性甚至同性恋描写能提供小人反辩的论据（声明：小人对断袖一类事没有恶见），但小人并不想就此展开，毕竟入乡随俗，所以在桃花源字典里没有的文字，在下文中一律用X代替。</p>
+<p>“此性彼性性非性拜托诗人仔细看”（借问一句，“性”字在贵乡字典中有吗？），这句曾贴在版上的话已经很好地回答《玩一次长的 54韵兼答garychangguo，嘘堂等》（下用《玩》代替）中性的意指。此外，《玩》表达的也不是古典的反抗主题（相信很多人即使认为其中有严肃的主题，也会被小人临刑前的一段瞒过，但“临死若有食来两斤山楂”这两句看似的闲笔已对此作出明确的消解），如果一定要明确说出其主题，后现代的反思以及对后现代的消解是其中一个指向（而主题的伪明确和后现代的伪装构成反讽）。</p>
+<p>《玩》从“小人即小人”到“何处不是家”是第一段，重点在“何处不是家”，表面的性由于有了这一句，使得“性”指向的多义有了明确的落实，也为以后的天上之梦埋下伏笔。任何桃花源字典以外都能查到的有关“性”的词语，个性、自性等等，表面上都来自表面的性，甚至包括无性繁殖和石头里崩出来的一类；而表面的性和大写“性”的关系，在道家伍柳派中得到探索，即使这种探索属于盲人摸象的一种。这个问题构成中国古典哲学的一条主线，性善性恶性空，纷纷嚷嚷，小人就不添乱了，因为所有概念都将在下面被消解。而有关表面性器的描写，可能会被认为是多余的，但这是为了后面“竟已黄豆芽”的消解作伏笔；至于是否委琐，就见仁见智了。当然，按照精神分析的说法，所有的夸饰都意味着相反，是否这样？可惜检验真理的唯一标准在虚拟的空间中也成了虚拟。</p>
+<p>“悠悠沧海水”到“万物类风葭”构成第二段，里面当然有很多的细分，但基本就是写一个梦。而所有的重点都落在“天地同一吼 X你X女娲”这一句，没有这一句，梦也不必醒，诗也不必作。女娲在历史上干了什么事，大概没有谁清楚，但女娲这个符号在历史上的指代，大概是有一定说法的。和女娲最重要的联系是所谓的补天，另外就是造人，显然这两者是有联系的。神话中的事情姑且不说，现实中的补天、造人，永远是历史的主题，不管那皮是红天、黑天，革命人还是经济人。“和泥不用水专做豆腐渣”，不管是人造天然，最终什么不是豆腐渣？管你前天昨天今天明天，最终只是累死你阿爷（一句土话）。该来还是要来，“河崩星斗碎 鲸涛卷无涯旋化三界火 万物类风葭”，借用的是水火风三灾的意象。由于涉及的问题太多，不便展开。一展开可能就不只犯这里的规矩了。</p>
+<p>虽然前面既有“天上与人间 终是等无差”较为现实明确的指向，也有“神女渺无踪 惟见树头鸦”的调侃，“翩翩神仙子人手一巨X”的坏笑。但绝对不能忽视那个没有出现的“ ”。这个没有出现的当然可以有古典反抗性的理解，但也应该包括有关“本体”“大写”“逻辑”等等的指代。当然，这还不够，任何在后面的或者自以为在后面的，不管是心理生理社会人生意识潜意识等等，所有所谓的落脚处，依靠处，无可指代处，都在指代之中。</p>
+<p>有关该段故事情节的展开、细节等就不说了，否则文章会很长（现在已经很长了，对此小人也深表厌恶），而且这不是关键的地方。</p>
+<p>“南柯一梦觉 乾坤正披纱 斜阳倾红泪 满山润枇杷 烟外村墟密 云间天路赊 呜咽如秋水不知何处笳”构成最后一段，这一段每一句都很重要，否则就死在后现代中了。首先，这一段的文字是最古典的（相对上面的，构成对比），其次，必须说明的是，梦醒在斜阳之下，梦是白日梦，一个后现代的白日梦，结束在斜阳之下。谁的斜阳？人类的？宇宙的？烟外村墟，现象等等此岸的东西，密；云间天路，本质等彼岸的东西，赊。</p>
+<p>小人即小人，小人非小人，傻坐在梦来梦醒的地方，真醒了？或者从来就未梦？不过作者觉得这个家伙有毛病，扮独坐大雄峰状，管你小人高士，先打成笳等你找不到北，然后让这小人的情人们戴完婚纱戴黑纱。惨，小人的情人从地球排到织女星，正掩杀过来，快逃。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../qsqtzp/2022ndsyw/wyccd54yjdgarychangguoxtd.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../qsqtzp/2022ndsyw/ldys.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../qsqtzp/2022ndsyw/wyccd54yjdgarychangguoxtd.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../qsqtzp/2022ndsyw/ldys.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../../ace.js"></script>
+        <script src="../../editor.js"></script>
+        <script src="../../mode-rust.js"></script>
+        <script src="../../theme-dawn.js"></script>
+        <script src="../../theme-tomorrow_night.js"></script>
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

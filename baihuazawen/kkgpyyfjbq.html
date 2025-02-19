@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>侃侃股票\音乐\房价\病情 - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="侃侃股票音乐房价病情"><a class="header" href="#侃侃股票音乐房价病情">侃侃股票\音乐\房价\病情</a></h1>
+<blockquote>
+<p>2008/7/9 16:06:27</p>
+</blockquote>
+<p>今天就来个杂谈，先说股票。股票走成这样，应该都在各位的预算之中，今天继续板块轮动，没什么可说的，只是想提一个问题，让各位思考一下，明天专门谈这问题：用最简单的均线方式对现在的股票进行完全分类，从而设计出短线轮动的最佳操作方式。这类问题都是让你终身受益的东西，请好好思考一下，明天继续说。</p>
+<p>各位应该发现，今天本博客又有了音乐，当然，由于原来本ID的音乐博客所在空间一直关闭，所以，只能随便在网上找点音乐。前两天说了唱歌，今天特意在网上找来中国老一辈老高音里本ID尚能接受的几位的一些录音。为什么都找男高音，因为男高音最难训练，技术上要求最高，所以可以更好地体会本ID说的技术要点。其实，站在纯技术的角度，这些人的发音技术都很有点毛病，但他们的声音比现在技术似乎很好但千篇一律的声音要好得多，音乐不光是技术，音乐首先必须是音乐的，否则找一个发声机器得了。现在的男高音，除了张建一、范竞马、魏松等少数几个还稍微可以，其他都不堪一听，就让他们自我娱乐去吧。</p>
+<p>昨天看房子，发现有人已经开始预谋反弹了，现在国家的态度很关键，是被劫持还是继续坚定不移（其实也从来没坚定过，说句不爱听的，秀的成分太多），利益集团肯定是不会束手待毙的（其实他们在这次所谓的调整中也没受什么伤，只是清洗了一些虾兵蟹将，真正的厉害角色好象更牛了）。当然，按本ID对管理层的认识，他们被劫持的概率太大，一个银行系统就够他们想的，而实际上，用银行系统的所谓风险来劫持国家，这种把戏搞了十几年还在玩，而管理层竟然每次都中招不误，你让本ID还能说什么？</p>
+<p>银行就是银行，一边股份化商业化，一边还让国家背着，这世界上哪有这么变态的事，如果有了，这说明了什么？如果一定要这样，干脆就双轨制算了，专门有几家留下来，福利性质地针对低收入人群，保证不会倒闭，其业务来源主要以政府性项目提供，这样就基本旱涝保收。其他银行一律市场化，特别与房地产相关的业务，只能市场化的银行从事，而这种银行是可以随时倒闭的，一切风险自担，国家就不背这本无关的玩意了。</p>
+<p>如果不这样，国家永远会被人劫持，现在的利益集团已经逐步国际化，后面的国家层面风险，如果不彻底来一下，就怕以后想被劫持也没人管你，因为不久的将来，极有可能就被直接打倒，对打倒的还劫持什么呀？</p>
+<p>双轨制当然是很笨的方法，但却是对应二元化基础本身的，世界上的事情，有时候最笨的就是最好的，这叫傻人有傻福，怕的就是有些人聪明不来又不肯去傻还占着茅坑，那就吃某些饭桌上不宜谈论的物体去吧。</p>
+<p>最后说说本ID的病情，现在这情况既没有那些天天咒本ID去死的人希望那样坏，也没有认为本ID有神迹的人想象那样好。本ID说了，这二三次化疗的三周间隙，就给我弟去摆弄了，但看来，纯粹药的作用是有限的，三周内出现根治的效果几乎不可能，而中医当然不止用药一招，但我弟目前好象只会这一招，而目前残留的位置，药物都很难达到，要有效果，估计要一年半载地磨下来才行。</p>
+<p>而那会十九路的高手，现在估计世上就没有了，问题是连会十路的好象都没找到，中医荒废如此，真令另人心寒。暂时，不想直接去找那奇人，最近本ID左侧开始出现状况，而这病根，当时那奇人已经事先说过，由于没有找到合适的人，所以这病根就发展了，不过这不是癌症的问题，更不是肿块，而是这种病根最终引发了癌症的病根，所以西医要根治，肯定是不行的。不过，把癌症的肿块削掉，应该还是有希望，所以，就等月末重新开始的化疗了。</p>
+<p>本ID暂时不想用纯打坐的方法去根治这病，因为，这样就不能尝试别的方法的功效，现在，本ID的身体就是一个实验品，难得有这种状况和机会，必须珍惜。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../baihuazawen/zmhsssbqb.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../baihuazawen/bqpyd.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../baihuazawen/zmhsssbqb.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../baihuazawen/bqpyd.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

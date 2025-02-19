@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>周末音乐会37：大地之歌，中西灵魂的419激荡 - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="周末音乐会37大地之歌中西灵魂的419激荡"><a class="header" href="#周末音乐会37大地之歌中西灵魂的419激荡">周末音乐会37：大地之歌，中西灵魂的419激荡</a></h1>
+<blockquote>
+<p>2007/6/3 11:42:41</p>
+</blockquote>
+<p>在中西文化的交流中，马勒的《大地之歌》占有很特殊的地位。当然，可以很宏大叙事地说，西方的古典音乐与东方的古典诗歌，都是两者文化中最精粹的，而两者的结合，就有了这马勒的《大地之歌》。但本ID不大喜欢这种说法，按这种说法，马勒的《大地之歌》只不过是一个419的产物，因为这样的作品，在东西方艺术文献上极为罕见，在马勒自己的作品中也绝无仅有，就如同一次419的燃烧，如此而已。</p>
+<p>419之所以能419，其基础绝对不会是任何宏大叙事的玩意，419的点燃，从来都是个人且碎片的。马勒，作为一个个体，从来都是复杂的，中国的古典诗歌点燃其热情，但绝对不能说，马勒在生命的终结处就完全于中国的古典诗歌心心相应了。马勒，一个没有家园的游魂，只不过在其生命的流浪中进行了一次419的激情，如此而已。</p>
+<p>419都是平等的，马勒让西方的古典音乐把东方的古典诗歌419了一把，并不是说西方的古典音乐就比东方的古典诗歌要强了。东方的古典诗歌，同样可以把西方的古典音乐419一把，问题的关键在于，419这419的人能否如马勒般马勒。</p>
+<p>现在，不妨先看看马勒这六乐章作品中所选取的唐诗原作，注意，这里的原作是否都是这些，有些还是有争论的，不过这问题不大，有一个大问题是，这里的诗歌，没有任何杜甫之类所谓现实主义的，李白，然后是王孟诗派（钱起归于此），由此不难明白，真正心灵的东西，最容易相通，最容易419式激发的，都不可能是太现实的。</p>
+<p>比起现实的苦难，心灵的苦难才真是人之大患，这是中西一脉的。放开你的心灵，去倾听这马勒的苦难，人类心灵苦难的激荡。</p>
+<p>马勒《大地之歌》的唐诗原文</p>
+<p>第一乐章：尘世苦难的饮酒歌</p>
+<p>李白《悲歌行》</p>
+<p>悲来乎，悲来乎。
+主人有酒且莫斟，听我一曲悲来吟。
+悲来不吟还不笑，天下无人知我心。
+君有数斗酒，我有三尺琴。
+琴鸣酒乐两相得，一杯不啻千钧金。</p>
+<p>悲来乎，悲来乎。
+天虽长，地虽久。金玉满堂应不守。
+富贵百年能几何，死生一度人皆有。
+孤猿坐啼坟上月，且须一尽杯中酒。</p>
+<p>悲来乎，悲来乎。
+凤凰不至河无图，微子去之箕子奴。
+汉帝不忆李将军，楚王放却屈大夫。</p>
+<p>悲来乎，悲来乎。
+秦家李斯早追悔，虚名拨向身之外。
+范子何曾爱五湖，功成名遂身自退。
+剑是一夫用，书能知姓名。
+惠施不肯干万乘，卜式未必穷一经。
+还须黑头取方伯，莫谩白首为儒生。</p>
+<p>第二乐章：秋天里的孤独者</p>
+<p>钱起《效古秋夜长》</p>
+<p>秋汉飞玉霜，北风扫荷香。
+含情纺织孤灯尽，拭泪相思寒漏长。
+檐前碧云静如水，月吊栖乌啼鸟起。
+谁家少妇事鸳机，锦幕云屏深掩扉。
+白玉窗中闻落叶，应怜寒女独无衣。</p>
+<p>第三乐章：青春颂</p>
+<p>李白《宴陶家亭子》</p>
+<p>曲巷幽人宅，高门大士家。
+池开照胆镜，林吐破颜花。
+绿水藏春日，青轩袐晚霞。
+若闻弦管妙，金谷不能夸。</p>
+<p>第四乐章：咏美人</p>
+<p>李白《采莲曲》</p>
+<p>若耶溪旁采莲女，笑隔荷花共人语。
+日照新妆水底明，风飘香袂空中举。
+岸上谁家游冶郎，三三五五映垂杨。
+紫骝嘶入落花去，见此踟蹰空断肠。</p>
+<p>第五乐章：春天里的醉汉</p>
+<p>李白《春日醉起言志》</p>
+<p>处世若大梦，胡为劳其生。
+所以终日醉，秃然卧前楹。
+觉来盼庭前，一鸟花间鸣。
+借问此何时，春风语流莺。
+感之欲叹息，对酒还自倾。
+浩歌待明月，曲尽已忘情。</p>
+<p>第六乐章：告别</p>
+<p>孟浩然《宿业师山房待丁大不至》</p>
+<p>夕阳度西岭，群壑倏已暝。
+松月生夜凉，风泉满清听。
+樵人归欲尽，烟鸟栖初定。
+之子期宿来，孤琴候萝径。</p>
+<p>王维《送别》</p>
+<p>下马饮君酒，问君何所之？
+君言不得意， 归卧南山陲。
+但去莫复闻， 白云无尽时。</p>
+<blockquote>
+<p>回复</p>
+<blockquote>
+<p>缠中说禅 2007/6/3 11:47:43</p>
+<p>各位周日好，北京今天依然多云，但阳光已能穿过云层。</p>
+<p>先下，明早见。</p>
+<p>缠中说禅 2007/6/3 11:53:39</p>
+<p>再补充一句，为某位为证券市场的大发展作出巨大贡献的老先生默哀。没有他，股改都可能中途夭折，他对这两年市场的贡献，虽然不为一般人所知，但历史会记住他的。</p>
+<p>为他念“往生咒”，阿弥陀佛。</p>
+<p>拿摩阿眯搭巴呀，达塔嘎达呀，达得压他，阿弥利兜、巴威，阿弥利达、悉眈巴威，阿弥利达、威哥兰谛，阿弥利达、威哥兰达、嘎弥尼，嘎嘎那、给地、嘎利，司哇哈。</p>
+</blockquote>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../yinyueyishu/qtdrwyls.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../yinyueyishu/zmyyh38.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../yinyueyishu/qtdrwyls.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../yinyueyishu/zmyyh38.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

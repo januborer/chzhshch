@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>教你打坐25：列宁物质定义的荒谬 - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="教你打坐25列宁物质定义的荒谬"><a class="header" href="#教你打坐25列宁物质定义的荒谬">教你打坐25：列宁物质定义的荒谬</a></h1>
+<blockquote>
+<p>2008/2/23 11:30:21</p>
+</blockquote>
+<p>列宁本质上与马克思无关，列宁式的社会主义更和马克思无关，那不过是一个反资本主义的民族主义的资本主义过程，必然导致权力资本主义。列宁的社会主义，不过是以马克思的名义进行的一场上帝化、基督教化的人性闹剧，最终只证明了马克思结论的无比正确：社会主义不可能在一国单独实现。社会主义，只可能是资本主义全球化后的一个全球化事件，之前是一切所谓社会主义的闹剧，都不过是闹剧而已。</p>
+<p>当然，列宁无疑是二十世纪最伟大的人物，正因为他无比天才的误读，才使得二十世纪如此地二十世纪了，没有列宁，整个二十世纪的历史将彻底被改写，因此，列宁的伟大是不用说明的，因为列宁就是整个二十世纪世界历史的源泉。</p>
+<p>但历史的伟大，并不能改变其思想与哲学水平的低下，这里只说相关的物质定义问题，因为现在那些所谓的唯物主义者还在继续口淫这无比幼稚的定义，然后从这个定义出发，演绎出无数语言与现实的闹剧。</p>
+<p>列宁的物质定义如下：“物质是标志客观实在的哲学范畴，这种客观实在是人通过感知感觉的，它不依赖于我们的感觉而存在，为我们的感觉所复写、摄影、反映。”</p>
+<p>这个定义是一个典型的同语反复，因为，按照唯物主义的观点，人的感知感觉等都是物质的功能，这样，物质的定义里面，首先就隐含了一个物质的潜在前提，也就是用物质去定义物质的问题，这样的定义，无论如何都是失败的。</p>
+<p>从欧几里德开始，最弱智的哲学家都知道，一个理论体系中的概念系统的定义，必须有一些不被定义的原始概念，否则将必要陷入循环定义的陷阱。因此，如果唯物主义要坚持所谓的物质第一性，那么这个物质就是不能被定义的，否则必然陷入循环定义。用人的感知感觉来定义物质，那么究竟谁是第一性的？这不明摆着承认人的感知感觉在概念上比物质要更靠前，更本原吗？这不是自打嘴巴吗？</p>
+<p>好，且不说这定义的循环定义问题，就算这定义本身，也是充满矛盾。首先，什么叫我们的感觉？这世界上哪里存在着我们的感觉的玩意？感觉都是个体的，你的感觉和我的感觉不同，例如两人玩SM，显然感觉不同才能玩得起来，否则虐待的和受虐的感觉一样，那怎么玩？</p>
+<p>站在个体感觉的角度，那么请问：你的感觉对于我的感觉来说是物质的吗？显然，你的感觉是一个客观实在，是我可以通过感知感觉的，它不依赖我的感觉而存在，为我的感觉所复写、摄影、反映。也就是说，你的感觉对于我来说，完全符合列宁的所谓物质定义，然后，所有非我的感觉，也可以如此符合。因此，我们可以创造这样一个哲学范畴，就是非我的感觉，这个哲学范畴，完全符合那所谓的物质定义，请问，这定义又定义了什么？</p>
+<p>因此，如果列宁的所谓定义要成立，必须假设一种超个体的、上帝式的，所有人统一的我们的感觉的存在，这才是列宁物质定义的真正潜台词。所以，一切列宁式的社会主义闹剧就有了一个真正的哲学基础，就是一种超个体的、上帝式的，所有人统一的我们的感觉的存在，这种存在如果被假设了，那么，所有人就该有一个统一的理想、统一的社会蓝图、统一的革命，而为了这个所谓的理想、目标、蓝图，所有人都该统一地去牺牲、去为这个所谓的理想去卖命。对于这种理想，个体是不存在的，因为真正存在的是超个体的、上帝式的，所有人统一的我们的感觉。</p>
+<p>这就是所有列宁式社会主义闹剧的真正思想根源。这样，我们就不难理解文革中十亿人共同进入一个节奏、一种疯狂闹剧了。所有的根源，都在列宁的所谓物质定义中了。</p>
+<p>好了，列宁的哲学闹剧就不说了，但这个问题很重要，“你”、“你的”名、相、妄想，这一切究竟如何去展开，不戳穿类似闹剧的荒谬，你就永远在这语言的陷阱中打转，永无出期。</p>
+<p>那么，真正的东西在哪里？下周告诉你。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chzhshch/bingconghelai1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../chzhshch/jiaonidazuo26.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chzhshch/bingconghelai1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../chzhshch/jiaonidazuo26.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>对毛泽东诗词创作中的缺陷的客观评价（一） - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="对毛泽东诗词创作中的缺陷的客观评价一"><a class="header" href="#对毛泽东诗词创作中的缺陷的客观评价一">对毛泽东诗词创作中的缺陷的客观评价（一）</a></h1>
+<blockquote>
+<p>喜欢数学的女孩</p>
+</blockquote>
+<p>大概时间关系，毛泽东对真正的诗歌艺术并没有太深入的钻研，从某种意义上说，毛泽东是那种元气挥洒来完成创作的，但由于在诗歌方面天分的限制，这种元气挥洒型的创作并不能达到如李白、苏轼等的高度，而且这也是毛泽东的诗不如词的一个原因。因为诗的原创性以及格律要求更严，词反而容易一点。这里先就毛泽东诗中主要类型的七律进行一个客观的评价。</p>
+<p>首先，对于七律来说，格律上要求很高，首先韵一般不能要词的韵，只能够押平水韵。而毛泽东在这一点上是没有做得很好，很多的七律都是按词韵来押。例如在“和柳亚子先生”以及“人民解放军占领南京”都是把三江韵的“江”字和七阳韵通押，这填词可以，但在七律里是绝对不允许的。同样的错误发生在“长征”里把十四寒和十五删韵通押；“冬云”和“吊罗荣桓同志”中把四支与五微韵通押等。大概是受到毛泽东的影响，后来写古诗的人按词韵甚至今韵来写的人也很多了，但这和真正的七律无关，而且千多年的历史证明，平水韵并不会压制真正诗人的思维，那种放松韵脚的做法，也没见写出什么东西来。</p>
+<p>其次，七律的对仗要求很严格，但毛泽东在这方面完成得不是很好。例如：“五岭逶迤腾细浪，乌蒙磅礴走泥丸。金沙水拍云崖暖，大渡桥横铁索寒。’两联都只能说凑上了，而且里面千字和山字出现在在首联和尾联，水字出现在首联和颈联，这在七律里是完全不可以接受的。假如用更高点的要求，对联不能出现合掌的情况，则有缺陷的地方就更多，例如：“红雨随心翻作浪，青山着意化为桥。天连五岭银锄落，地动三河铁臂摇。”两联都是合掌，后面一联就更厉害一点。</p>
+<p>至于，七律各联之间的起承转合关系、句式的交错等等，那要求就更高了。毛泽东在这方面做得很不好，特别是颈联的转，几乎没有几首做到了，因此整首诗几乎变成联与联间的罗列，由于毛泽东喜欢用一些大意象的词语，在这种意象下，一般的人就不会注意到这里的问题。但一首真正好的七律是一个浑然的整体，是一个生命，联与联之间有着生命般的流动。达不到这种要求，至少在艺术上就不可能成为一首好的七律。</p>
+<p>其实，对于毛泽东七律的问题，毛泽东自己是很清楚的，而且在对陈毅的信中明确说自己对自己的七律没有一首是满意的，而词好一点。这是很客观的，毛泽东的词就是比诗要好。一首好诗，并不就是靠一些大意象堆砌一下就行的，里面的复杂程度并不是那么简单的，想想，中国历史上写七律的人多如牛毛，但真正的好七律，大概也就只有百分之一都不到？就算是杜甫、李商隐、黄庭坚，也不是每一首七律都是好的，下面摘抄几首七律，大家可以从艺术上比较一下。</p>
+<p>杜甫
+登高</p>
+<p>风急天高猿啸哀，渚清沙白鸟飞回。</p>
+<p>无边落木萧萧下，不尽长江滚滚来。</p>
+<p>万里悲秋常作客，百年多病独登台。</p>
+<p>艰难苦恨繁霜鬓，潦倒新停浊酒杯。</p>
+<p>阁夜</p>
+<p>岁暮阴阳催短景，天涯霜雪霁寒霄。</p>
+<p>五更鼓角声悲壮，三峡星河影动摇。</p>
+<p>野哭千家闻战伐，夷歌数处起渔樵。</p>
+<p>卧龙跃马终黄土，人事音书漫寂寥。</p>
+<p>秋兴</p>
+<p>昆明池水汉时功，武帝旌旗在眼中。</p>
+<p>织女机丝虚夜月，石鲸鳞甲动秋风。</p>
+<p>波飘菰米沉云黑，露冷莲房坠粉红。</p>
+<p>关塞极天惟鸟道，江湖满地一渔翁。</p>
+<p>李商隐</p>
+<p>锦瑟无端五十弦，一弦一柱思华年。</p>
+<p>庄生晓梦迷蝴蝶，望帝春心托杜鹃。</p>
+<p>沧海月明珠有泪，蓝田日暖玉生烟。</p>
+<p>此情可待成追忆，只是当时已惘然。</p>
+<p>迢递高城百尺楼，绿杨枝外尽汀洲。</p>
+<p>贾生年少虚垂泪，王粲春来更远游。</p>
+<p>永忆江湖归白发，欲回天地入扁舟。</p>
+<p>不知腐鼠成滋味，猜意鸳雏竟未休。</p>
+<p>有美堂暴雨
+苏轼</p>
+<p>游人脚底一声雷，满座顽云拨不开，</p>
+<p>天外黑风吹海立，浙东飞雨过江来。</p>
+<p>十分潋滟金樽凸，千杖敲铿羯鼓催。</p>
+<p>唤起谪仙泉酒面，倒倾鲛室泻琼瑰。</p>
+<p>后秋兴之十三（八首选一）
+钱谦益</p>
+<p>海角崖山一线斜，从今也不属中华。</p>
+<p>更无鱼腹捐躯地，况有龙涎泛海槎？</p>
+<p>望断关河非汉帜，吹残日月是胡笳。</p>
+<p>嫦娥老大无归处，独俺银轮哭桂花。</p>
+<p>秋心
+龚自珍</p>
+<p>秋心如海复如潮，但有秋魂不可招。</p>
+<p>漠漠郁金香在臂，亭亭古玉佩当腰。</p>
+<p>气寒西北何人剑，声满东南几处箫。</p>
+<p>斗大明星烂无数，长天一月坠林梢。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../qsqtzp/qgxhkddltzp/dmzdscczdygkgpj.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../qsqtzp/qgxhkddltzp/dbzdscczzdqxdkgpj2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../qsqtzp/qgxhkddltzp/dmzdscczdygkgpj.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../qsqtzp/qgxhkddltzp/dbzdscczzdqxdkgpj2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../../ace.js"></script>
+        <script src="../../editor.js"></script>
+        <script src="../../mode-rust.js"></script>
+        <script src="../../theme-dawn.js"></script>
+        <script src="../../theme-tomorrow_night.js"></script>
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>彻底打倒一切左派右派中间派反对一切派清流派！ - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="彻底打倒一切左派右派中间派反对一切派清流派"><a class="header" href="#彻底打倒一切左派右派中间派反对一切派清流派">彻底打倒一切左派右派中间派反对一切派清流派！</a></h1>
+<blockquote>
+<p>喜欢数学的女孩（缠中说禅）</p>
+</blockquote>
+<p>一、佐派伪君子，快把你们那些人民、阶级、平等的烂伪装拔光吧。</p>
+<p>佐派，无论派别新旧，言行上都是伪君子，免不了欺世盗名、狐假虎威、假仁假义、吹牛拍马。佐派伪君子，快把你们那些人民、阶级、平等的烂伪装拔光曝光吧。</p>
+<p>其实，在新旧的佐派想法中，人民、平等等无一不被吹嘘成最高的价值，因为在他们那里，人民所谓阶级斗争来的平等已经是最好的掩饰。新旧佐派都喜欢拿着这些来说事，而最起劲的从来都是小喽罗，在中国，这种喽罗满大街都是。</p>
+<p>其实佐派整天头上举着、扯着的人民、阶级、平等，就如山鸡羽毛一般。这种山鸡羽毛式的人民、阶级、平等、从来不曾有，有的只是在某种现实社会关系中表现出来的人民、阶级、平等，而山鸡羽毛就是山鸡羽毛，拔光了就是一地鸡毛。</p>
+<p>由于佐派习惯了山鸡羽毛，在他们头上的平等也山鸡羽毛式的伪装。佐派整天就对所谓大锅饭念念不忘，因为按佐派的实际智力，也就和右派一样，都以为平等就是象去市场买东西时的斤两关系。孰不知这种平等观属于最弱智的一种，左派和右派本质上都是幼派。</p>
+<p>举个例子，如果关系R满足：1、aRa 2、aRb 则 bRa 3、aRb，bRc 则aRc，则这个R关系的范围就比幼派那种斤两关系要大得多多了。后者只是前者一个最简单无聊的情况。当然，还有更广泛的R，这里就不说了。所有现实的阶级、专政、自由、民主、人权等等都可以通过和R有关的一堆东西进行描述，离开了R，没有一样东西是有意义的。</p>
+<p>只有这种处在整 个社会结构中心位置的R，才是平等的真实含义，在现实中平等是第一位的。但这个R不是一个固定的东西，而是一个复杂的空间，因此具有某种历史的可能，念念生灭，并不是象幼派自由、民主、人权的破玩具，或者佐派人民、阶级、平等的烂伪装，都是些抽象的概念。</p>
+<p>二、幼派小朋友，快把你们那些自由、民主、人权的破玩具扔到垃圾桶里去吧。</p>
+<p>幼派，无论年龄大小，智力上都是小朋友，免不了交头接耳、大声喧哗、随地便溺、鬼哭狼嚎。幼派小朋友，快把你们那些自由、民主、人权的破玩具扔到垃圾桶里去吧。</p>
+<p>其实，在最新的幼派想法中，民主、人权等已经不被看作最高的价值，因为在他们那里，资本所谓与生俱来的自由已经不需要任何的掩饰。可是老派的幼派还是有意无意地拿它们说事，而最起劲的反而是小喽罗，在中国，这种喽罗满大街都是。</p>
+<p>其实幼派整天口里嚼着、含着的自由、民主、人权，就如龟毛兔角一般。这种龟毛兔角式的自由、民主、人权从不曾有，有的只是在某种现实社会关系中表现出来的自由、民主、人权，后者从来就有，只是对于某类人太多，某类人太少罢了。</p>
+<p>由于幼派戴惯了龟毛眼镜，在他们眼中的平等也就成了和虚无缥缈的自由、民主、人权一类的东西。幼派刚故去的偶像李老头，一大把年龄还混淆这两者，成了所有幼派的笑话。</p>
+<p>幼派整天就对所谓大锅饭喷唾沫，因为按幼派的智力，都以为平等就是象去市场买东西时的斤两关系。孰不知这种平等观属于最弱智的一种。</p>
+<p>举个例子，如果关系R满足：1、aRa 2、aRb 则 bRa 3、aRb，bRc 则aRc，则这个R关系的范围就比幼派那种斤两关系要大得多多了。后者只是前者一个最简单无聊的情况。当然，还有更广泛的R，这里就不说了。所有现实的阶级、专政、自由、民主、人权等等都可以通过和R有关的一堆东西进行描述，离开了R，没有一样东西是有意义的。</p>
+<p>只有这种处在整个社会结构中心位置的R，才是平等的真实含义，在现实中平等是第一位的。但这个R不是一个固定的东西，而是一个复杂的空间，因此具有某种历史的可能，念念生灭，并不是象幼派自由、民主、人权的破玩具，都是些抽象的概念。</p>
+<p>三、中庸有罪，号称左派右派都反的中间派是比左派右派都更恶心的一群。</p>
+<p>左派右派可恶就不用多说了，而历史上、现实中、论坛里往往有一群人号称什么中间派，左派右派都反，一副一碗水端平的臭样子。中庸有罪，号称左派右派都反的中间派是比左派右派都更恶心的一群。</p>
+<p>历史上的中间派无一不是软骨头、死滑头，企图左右逢迎捞取利益。所有中间派的结局不是左倾就是右倾，最终哪个不是被招安的主。说白了，所谓中间派就是算计自己奇货可居，左派、右派人太多，弄一个中间派，一旦左派右派力量相当时，中间派就成了大筹码可以卖大价钱了。一旦左派右派分出胜负，中间派投怀送抱的速度比谁都快。</p>
+<p>问题不是是否有左中右的问题，而是那个派字。所谓派，就是一个蛇鼠的窝。这派那派的，还不如苹果派、菠萝派去了算了。所谓的左中右，都不过是一种语言霸权下别有用心的伎俩。就算一个什么派说要反对一切派别，也还是一个打倒一切派别的派，没什么不同。</p>
+<p>一切从来都是倒的，倒的都是该倒的，不倒的最终都是要倒的，就像不管左派右派中间派反对一切派，最终都只是一个派：死人派。如果世界上真是有什么派，死人派就是唯一真实的派。还有所谓的清流，装着高深莫测，其实不是混蛋就是企图混水，不过企图终南捷径而已，一个无派的派，一样是死人派。</p>
+<p>左派、右派、中间派，反对一切派，清流派，最终都在死人派下一统江湖，这才是历史的唯一真实。整天就在争论什么左派右派的异同，其实有什么异同呀，所有的异同都在死人派下没异同了。既然如此，除了别有用心者，这种争论还有存在的必要吗？</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../qsqtzp/qgxhkddltzp/mwyqzxqxdljlz.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../qsqtzp/qgxhkddltzp/jrjjdzygbmxzbxxhzztjzjzqebsjcxdmhp.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../qsqtzp/qgxhkddltzp/mwyqzxqxdljlz.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../qsqtzp/qgxhkddltzp/jrjjdzygbmxzbxxhzztjzjzqebsjcxdmhp.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../../ace.js"></script>
+        <script src="../../editor.js"></script>
+        <script src="../../mode-rust.js"></script>
+        <script src="../../theme-dawn.js"></script>
+        <script src="../../theme-tomorrow_night.js"></script>
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

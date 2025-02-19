@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>教你打坐22：佛魔最难除 - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="教你打坐22佛魔最难除"><a class="header" href="#教你打坐22佛魔最难除">教你打坐22：佛魔最难除</a></h1>
+<blockquote>
+<p>2008/1/27 10:15:10</p>
+</blockquote>
+<p>最后毁掉佛教的，一定是佛门中人，所谓狮子虫。当然，真正的佛教，不去不来，不生不灭，无所谓毁掉。有生就有灭，能毁掉的，不过是一般人眼里的某种的所谓佛教形态。</p>
+<p>那些看佛教大词典、哲学讲义去懂佛教的垃圾虫，当然成不了狮子虫。能当狮子虫的，都是些所谓的大德。这些人，三藏大概也看了一藏、佛言佛语大概也记了一筐，修行大概也折腾了几下，忽悠一些众生，那还不是玩一样？</p>
+<p>这类人，在世界各地多了去了，当然，更多的是披着各色的心灵导师的外衣，信众多如牛毛。众生愚痴，总希望在自己之外找一个拐杖，所有的这类货色就因此而有了市场。</p>
+<p>所有这些玩意，无一不是在意识之中打转转，生死到来，顶个屁用。鉴别这些人的第一步，你就看，这些教导的玩意，生死到来，有用否？就算你练得一丝所谓的妄念都没有，心无分别到看大盘从10000点到0点与0点到10000点是一回事情，别人打了你两边脸你还要把屁股送上受虐，可以1000天不吃饭不喝水照样可以N的平方P，诸如此类，生死到来，有用吗？</p>
+<p>还有些，承诺你死了以后，可以到这里到那里，你的身体可以化为一片光，飞到哪里去；经过审判你可以进天国，你的仇人都下地狱；你的身体毁灭了，你的灵魂永生，诸如此类的废话，都不过是人的贪嗔痴疑慢做怪，就像埃及的法老要把自己变成那干尸去求永生一样可笑。</p>
+<p>这些人，不过是很粗劣的伎俩，还算不了被佛所魔，不过是自我所魔罢了。</p>
+<p>不妨看看这些无聊人忽悠的一些词语：</p>
+<p>“学会活在当下”：请问，有一个在任何一刻能不是“活在当下”的吗？活，就是当下，有离开当下的活吗？不管你学不学，就算你坚决拒绝，强力摆脱，但无论你如何折腾，你的每一刻每一秒都只是活在当下。有人说，这里的活在当下指的是你的意识，请问，你的当下难道没有意识？任何人的当下都是六识共转的，不管你意识什么，你都在当下。请问，一句“学会活在当下”忽悠了多少人？</p>
+<p>“放下分别心”：请问，放下分别心的难道就不是分别心？没有分别，何来放下不放下？更重要的是，放下所谓的分别心后，就是最大的分别，因为，这世界与时空就被这所谓的放下分裂成了放下前与放下后，这所谓的“放下分别心”，反而创造了最大的分别。请问，谁“放下分别心”？这个谁和这个放下是同是别？如果是同，那么，谁就是放下，何必再放下；如果是别，谁和放下就被分别了，何来放下分别心？这句废话，又不知道忽悠了多少人。</p>
+<p>“修炼到一心不乱”：能修炼的，就能毁坏，你那所谓的“一心不乱”，不过是自我淫乱，内闭幽明而不自知；不乱，恰恰就是大乱，一心反而是多心，那“一心不乱”的所谓境界，生死门前就烟消云散去了。而这句烂话，又忽悠了多少人？</p>
+<p>诸如此类的话太多，没兴趣一一分析。这些，都不能归之于佛魔难除的范畴。有人问，那么是不是就是“见佛杀佛”才能破佛魔啊？可笑，能被杀能是佛吗？你杀的不过是自己的幻象，而这个杀，就是更大的幻象。那些以为“见佛杀佛”就是什么高深境界的，连那看到黄叶就不哭的小孩都不如。</p>
+<p>佛魔难除，就是你连佛魔难除的境界都难以梦到，你玩弄的，不过都是些自我幻象。</p>
+<p>人，总是自己骗自己；人，只能自己骗自己。没有你自己，谁都骗不到你。</p>
+<p>这世界就是这么简单，人啊人。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chzhshch/nihuiqichuangme.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../chzhshch/jiaonidazuo23.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chzhshch/nihuiqichuangme.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../chzhshch/jiaonidazuo23.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

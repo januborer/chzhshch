@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>上升通道下轨支持如期反弹 - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="上升通道下轨支持如期反弹"><a class="header" href="#上升通道下轨支持如期反弹">上升通道下轨支持如期反弹</a></h1>
+<blockquote>
+<p>2007/10/23 15:40:39</p>
+</blockquote>
+<p>昨天说得很清楚，1分钟下跌底背驰后，一轮反弹将展开。今天的技术走势十分标准，更重要的是，这里是3600点上来的上升通道下轨位置，又是缺口位置，因此技术上必须要有这次反弹。</p>
+<p>在前面已经明确说了，空头现在的策略，就是逢反弹必抢的，抢了以后，等不死心的涌上去没力时，才有筹码喂饱人。注意，这里本ID又有金针度人，不是任何反弹都可以抢的，只是做顶行情中的反弹可以抢，一旦顶部完全形成，破位后，那么反弹就没必要抢了，让别人去多杀多就可以，除非有特别大级别的买点。这是一个十分微妙的关系，但一般脑子进水的都不大明白。因为在那些人眼里，反弹都是一样，而实际上，在做顶行情中搞反弹，只是为了促进顶部的形成，而且也为一旦顶部形成不了而准备好后手。</p>
+<p>做盘就如同下棋，必须有大的想法，而不是看一步走一步。着着有后手，这样才能稳胜不败。</p>
+<p>以上的话，都是给现在技术还行的人看的，这里的标准就是，空仓或者目前的市值比6124.04点那天高的人。其他人，根本没资格抄什么反弹，先借反弹把市值恢复上去再说。</p>
+<p>这如同跳舞，节奏已经错了，就不能错上加错，先把节奏调整对再说。</p>
+<p>反弹的压力，首先是5日线，然后是10日线，如果这两条线都不能突破，那么这个反弹就将构成第二类卖点，后来是什么就不用说了。</p>
+<p>注意，中石油上市，会给市场又一个兴奋的借口。但关键是政策面的趋向能给多少时间，中字头会借此兴奋一下，今天这已经有点表现。另外，二线蓝筹在反弹中也会表现的，例如科技股以及其他题材股之类，因为前面根本没动，所以有所轮动也很应该，但这些股，大面积表现的可能性不大。</p>
+<p>本ID已经反复强调，顶不是一天搞成，这里有一个微妙的潜在语：最后破位之前，最终套住谁，现在还没有定呢，所以，6124.04点逃掉的，也不要高兴太早，一旦反弹做错，最后来个站岗大换班，那是常有的事情。</p>
+<p>所以，现在的反弹操作，一定要谨慎，请量力而行</p>
+<p>最近很忙，刚才一边写东西一边就电话不断，所以没时间回答问题了，抱歉。</p>
+<p>先下，再见。</p>
+<blockquote>
+<p>回复</p>
+<blockquote>
+<p>缠中说禅 2007/10/23 15:59:27</p>
+<p>缠中说禅(即本屄)</p>
+<p>　　 本屄在网上未逢对手，把中文网络最火地方的男人都弄得相当难受，其实本屄也相当难受，怎么这世界上就没有一个厉害一点的角色，让本屄费点劲。知道网上的男人对本屄不服，千方百计想把本屄弄走，设计些小伎俩来证明男人的心胸狭隘。好，今天本屄就给一个机会全世界男人，也不出太难的问题，就步韵和本屄一首随手写出来的词，只要有一首比本屄写得好的，本屄马上戒屌。这首词在本屄所写里，其实并不很好，但战胜男人已经足够。另外，还让男人一步，就是有谁能改动其中一个字，本屄也认输，至少戒屌半年。男人，别整天就会口活，就会日，想把本屄赶走，拿本事来！</p>
+<p>缠中说禅 2007/10/23 15:59:27</p>
+<p>缠中说禅(即本屄)</p>
+<p>　　 本屄在网上未逢对手，把中文网络最火地方的男人都弄得相当难受，其实本屄也相当难受，怎么这世界上就没有一个厉害一点的角色，让本屄费点劲。知道网上的男人对本屄不服，千方百计想把本屄弄走，设计些小伎俩来证明男人的心胸狭隘。好，今天本屄就给一个机会全世界男人，也不出太难的问题，就步韵和本屄一首随手写出来的词，只要有一首比本屄写得好的，本屄马上戒屌。这首词在本屄所写里，其实并不很好，但战胜男人已经足够。另外，还让男人一步，就是有谁能改动其中一个字，本屄也认输，至少戒屌半年。男人，别整天就会口活，就会日，想把本屄赶走，拿本事来！</p>
+<p>缠中说禅 2007/10/23 15:59:28</p>
+<p>缠中说禅(即本屄)</p>
+<p>　　 本屄在网上未逢对手，把中文网络最火地方的男人都弄得相当难受，其实本屄也相当难受，怎么这世界上就没有一个厉害一点的角色，让本屄费点劲。知道网上的男人对本屄不服，千方百计想把本屄弄走，设计些小伎俩来证明男人的心胸狭隘。好，今天本屄就给一个机会全世界男人，也不出太难的问题，就步韵和本屄一首随手写出来的词，只要有一首比本屄写得好的，本屄马上戒屌。这首词在本屄所写里，其实并不很好，但战胜男人已经足够。另外，还让男人一步，就是有谁能改动其中一个字，本屄也认输，至少戒屌半年。男人，别整天就会口活，就会日，想把本屄赶走，拿本事来！</p>
+<p>缠中说禅 2007/10/23 15:59:29</p>
+<p>缠中说禅(即本屄)</p>
+<p>　　 本屄在网上未逢对手，把中文网络最火地方的男人都弄得相当难受，其实本屄也相当难受，怎么这世界上就没有一个厉害一点的角色，让本屄费点劲。知道网上的男人对本屄不服，千方百计想把本屄弄走，设计些小伎俩来证明男人的心胸狭隘。好，今天本屄就给一个机会全世界男人，也不出太难的问题，就步韵和本屄一首随手写出来的词，只要有一首比本屄写得好的，本屄马上戒屌。这首词在本屄所写里，其实并不很好，但战胜男人已经足够。另外，还让男人一步，就是有谁能改动其中一个字，本屄也认输，至少戒屌半年。男人，别整天就会口活，就会日，想把本屄赶走，拿本事来！</p>
+</blockquote>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../shizhengjingji/rjtyltyddtjgq.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../shizhengjingji/tllmsjxtzsljxh.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../shizhengjingji/rjtyltyddtjgq.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../shizhengjingji/tllmsjxtzsljxh.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

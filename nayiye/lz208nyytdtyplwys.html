@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>那一夜，他的体液喷了我一身（二十八） - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="那一夜他的体液喷了我一身二十八"><a class="header" href="#那一夜他的体液喷了我一身二十八">那一夜，他的体液喷了我一身（二十八）</a></h1>
+<blockquote>
+<p>2007/12/24 16:18:19</p>
+</blockquote>
+<p>晚上有一收购的事情要谈，估计很晚回来，把帖子先贴上，抱歉。
+二十八</p>
+<p>[16:09:34] 【XX】对XXX说：高/重/年龄</p>
+<p>[16:09:45] XXX对【XX】说：180/80/43</p>
+<p>[16:10:00] 【XX】对XXX说：从事什么？</p>
+<p>[16:10:25] XXX对【XX】说：中文系副教授，主攻现代小说与武侠小说，鲁迅研究专家。</p>
+<p>[16:10:39] 【XX】对XXX说：哈哈，你很环保。
+[16:11:09] XXX对【XX】说：什么意思？
+[16:11:17] 【XX】对XXX说：专门进行垃圾分类呀。</p>
+<p>[16:11:30] XXX对【XX】说：胡扯！鲁夯之徒！
+[16:11:48] 【XX】对XXX说：哈哈，看来你还不算太垃圾桶，居然知道胡适尽乱扯、鲁迅是夯货，还没到不可救药的地步。
+[16:12:17] XXX对【XX】说：鲁迅是夯货？鲁迅是民族的脊梁。
+[16:13:12] 【XX】对XXX说：鸭屁！民族的脊梁是那些“一·二八事变”中为国捐躯的勇士，而不是那只马上跑到日本人那里逃避战火哀求保护的鸭子。难道你不知道那日本书店是日本的间谍机关所设立？这一点，当时早就有人揭发，你这专门研究垃圾的，难道不知道这垃圾的这点破事？请问你一个问题，为什么这鸭子在九一八以后，还让一家有日本间谍嫌疑的书店有着超乎寻常的交易？为什么这鸭子的终身朋友中，几乎无一例外都是日本人？这鸭子号称不宽恕一人，怎么日本人就不在其中？难道对九一八、一二八就可以宽恕到继续和日本人称兄道弟？这鸭子应该庆幸自己没活到南京大屠杀，否则全中国都会看清楚它的嘴脸。</p>
+<p>[16:13:27] XXX对【XX】说：歪理，道听途说。先生以笔杆子为武器，和枪杆子发挥的作用是一样的。</p>
+<p>[16:13:54] 【XX】对XXX说：脑子锈了？这鸭子在民族危难之时，天天打嘴仗把中国人描画得一团漆黑，这动摇军心的笔杆子效果确实赶得上第五纵队的枪杆子！告诉你，那些战死沙场的勇士里，绝大多数就是它所抹黑的需要改造的普通中国人。</p>
+<p>[16:14:12] XXX对【XX】说：强词夺理</p>
+<p>[16:15:19] 【XX】对XXX说：就算用最善良的动机来评估这鸭子，它和古代的文人比，也是软骨头！知道中华民族的文化脊梁是什么吗？是“北极朝廷终不改,西山寇盗莫相侵”的杜甫，是“壮志饥餐胡虏肉，笑谈渴饮匈奴血“的岳飞，是“王师北定中原日，家祭无忘告乃翁”的陆游。且不说杜甫、陆游，在国家危难之时，所写诗篇都与之息息相关，就算是郑成功的师傅、柳如是的丈夫，那曾经被看成汉奸的钱谦益，到死都为了那几个月的不坚定行为而悔改、不断地组织反清暴动、支持反清武装。为了文化上的忏悔，他史无前例地把杜甫的秋兴八首连续步韵了十几次，把他的忏悔与反清历程与最后的失败一一记录，看看这用血写成的诗句：“海角崖山一线斜，从今也不属中华。更无鱼腹捐躯地，况有龙涎泛海槎。望断关河非汉帜，吹残日月是胡笳。嫦娥老大无归处，独倚银轮哭桂花”，周树人这鸭子，有哪一句诗、哪一句话，在九一八后达到这里的万分之一？这鸭子就算有亿万分之一的机会不是汉奸、日本间谍而只是一个被日本人洗脑的蠢货，那也是一个无耻的、不配当中国人的垃圾文人！</p>
+<p>[16:15:59] XXX对【XX】说：先生关注的是人性、国民性，没有健全的人哪里有健全的国家？</p>
+<p>[16:16:38] 【XX】对XXX说：鸭屁人性、国民性，在现实中，人的第一人性就是人有国家、何谓国民？没有国家哪里来国民？国家的存在，是探讨所谓人性、国民性的第一前提，在世界大同、国家消亡之前，这个前提都不会被改变。因此，在国家利益被侵害时，在国家危亡之时，探讨鸭屁人性、国民性？前提都没有了，你探讨什么？当国际性地球村鸭子去吧，那可以只有性，被黑白棕黄消费，美圆英镑欧元人民币都可以，快去吧！</p>
+<p>[16:17:16] XXX对【XX】说：无耻，你读的什么书，真为你感到羞耻。
+[16:17:34] 【XX】对XXX说：可笑！连周树人都可以被书被教科书，然后养你们这种垃圾桶，浪费人民币大米猪肉粉条，面首去吧！磨墙去吧！</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../nayiye/lz252627nyytdtyplwys.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../weifenlei/instruction.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../nayiye/lz252627nyytdtyplwys.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../weifenlei/instruction.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

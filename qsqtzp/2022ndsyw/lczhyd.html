@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>4.论创作和阅读 - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="4论创作和阅读"><a class="header" href="#4论创作和阅读">4.论创作和阅读</a></h1>
+<p>不管积累了多少传统，文字也只是痕迹的一种。在广义的角度，诗在当下绽放，写下来都是尸体，成为狭义的诗。但尸体就尸体，玩尸体也挺有趣，看，几千年了还乐此不疲。</p>
+<p>尸体有很多种，啃过的都知道，不只啃小人头那。这么多的诗体种类，啃了这么多年，任何一块骨头都被啃过很多次了，当然，唾沫星也可能被作为美味，只要是来自那些千年、万年药铺的。尸体和唾沫星就不说了，这都不重要，在当下的绽放中，这一切都被融化，尸体和唾沫星都被粉碎混到土里，只有当下的绽放，其它都是多余的。在当下的绽放中，感、语、语感的划分也是多余的，形式、文字等等更是一下被点燃、照亮。不用眼睛，已经把所有的细节看清，感官的划分也是多余的，嗅觉、味觉、听觉、触觉等等都可以呈现。如果看了这还不明白，那可以去听听莫扎特或舒伯特的作品。</p>
+<p>一般来说，平常所认为的创作其实只是一种记录，把当下的绽放记录下来。象莫扎特和伯特之类的人，这种记录在当下就完成了；但大多数的人就象贝多芬一样，记录是一个痛苦的过程，或者说是一个迷失的过程。所有的迷失来自痕迹的束缚，束缚带来懒惰，只有极少象贝多芬之类的人才能不断突破这些痕迹的束缚，完成苦涩的记录。虽然分类不是小人所喜欢的，但如果要对记录玩这个游戏，则可说为三类：被痕迹束缚的，突破痕迹的，当下绽放的。不行，有一只脚飘过来了，等一等 ——</p>
+<p>好不容易追上昨天那脚，一抓，竟然是空的。只好继续十个指头在键盘物体上的飘动。</p>
+<p>上面说过，平常所指的创作其实只是对当下绽放的记录。这里必须首先聊聊所谓的灵感。灵感属于一种记录的状态，或者说是记录当下的敞开，而记录的当下就是语感，换句话说，创作和记录属于语的过程，灵感就是语感的敞开。</p>
+<p>对于莫扎特和舒伯特等当下绽放的一类人，并不需要什么灵感，他们就是音乐本身，灵感对于他们来说已经是多余的，或者说感、语感和语直接相通，并不需要所谓的灵感来照亮什么。对于大多数被痕迹束缚的一群，灵感是一种特别的经验，是不断挣扎的一种释放。</p>
+<p>感、语感和语的通道时开时合，在不断的抽动中灵感喷发了。这种挣扎对于大多数人来说最终导致灵感的永远离开，类似某种功能性疾病。但灵感的快乐太强烈了，为了寻找往日的好时光，所有的理论、概念补药就出来了，修养之类的东西就象伍柳派的某些活动，还精补脑、最后个个红光满面、修养学识十足，到头来怎样，自己最清楚。</p>
+<p>当然，这世界上的人也太多了，不制造点神仙、半仙、神人、圣人，弄些语录、脚录，大家不闲死就怪了。除了这些，还有无数民间药方、谚语，当然也包括一滴十滴之类的。最终，痕迹变成巨网，自缚缚人，纠缠不清。</p>
+<p>哇，小人最重要的部位射过来了，快追—————</p>
+<p>最该有的终于有了，好好幸运啊。今天可以10加1了。</p>
+<p>昨天把灵感和小人刚追回来的东西相联系，大概又要得罪一群。但小人有偷窥癖，专喜欢扯开一些神圣的外衣，什么圣母、贞女，概无例外。</p>
+<p>昨天还提到痕迹变成巨网，自缚缚人，纠缠不清。但最好玩的是，那些挥舞屠龙刀、倚天剑的英雄英雌们，最后发现只不过在继续网的编织，屠龙刀、倚天剑，他们她们的所有思想、行为、甚至身上的每一个细胞，哪一样不在网中？</p>
+<p>昨天还说到修养，把修养看成还精补脑大概又会惹人不快。其实，看就看，不看就不看，没有太多的废话。如果明白各种所谓学问的构造方式和一些基本的结构，看书就是看一些游戏如何被玩，而玩者又如何象蜘蛛一样候着，能弄死哪几类蚊子或文字等等。看书假如不到这种状态，那基本就瞎了，虽然即使到这种状态也没有什么大不了的。看一切可以找到而你还觉得有趣的书，识破所有的诡计，如果暂时看不透，歇歇在来。不要放过任何一个疑问，任何一个疑问辗转下来都将成云成雨覆天盖地，变牛变马、变仙变鬼几十亿次也不会揭开。</p>
+<p>虽然小人对书没有特别的爱好，但既然瞎了，也就继续瞎聊。在所有书里面，小人觉得数学是必须首先要读的，对数学了解越深，在其它方面被欺骗的机会就越少。这里指的不是具体的领域，而是数学游戏的整体玩法。从某种意义上说，对数学特别是现代数学没有基本的了解，去扯谈什么存在、语言、结构、解构、后现代都是笑话。其实，任何思维的玩意，在某种程度上都和一些数学游戏同构，而数学里面的玩法不知比其它复杂多少倍。可以这样说，现在哲学之类东西所玩的东西大概就对应数学20世纪初的水平，可惜现在的数学越来越变成天书，能看懂的人看其它书，只要花点时间熟悉一下基本的概念，就象玩一样；反之，几乎不会有类似的可能。</p>
+<p>上面说到数学，相信大多数喜欢文学的人对数学都比较怕，其实没有什么大不了的。去了解一样东西，并不需要去成为专家，而所谓的专家往往都是大傻冒。就算在数学里面，大多数只不过是证明机器，对数学的整体把握这才是最重要的。</p>
+<p>除了数学，物理也是必须了解的。从某种意义上说，物理只是数学的一个分支，象量子力学之类的都是可以进行公理化研究的。这一方面大概搞物理的人是不大喜欢的，他们总是强调两者之间的所谓不同，这种口舌事情就不说了。总的说来，物理比较简单，在概念上更容易被把握，有更多的直观性。只要不是从事专门的研究，在一定数学基础的前提下，大致的了解是容易的。这里关键要注意的是具体物理图景后面的思维模式。</p>
+<p>此外，有关人体方面的研究也是必须要知道的，看看这个皮囊每天都干些什么、所谓的思维在生物、生理层面的过程，所谓的情绪如何在某种化学过程中得到制造等等。了解多一点，对消解很多关于人类的神话大概有一定帮助。</p>
+<p>当然，假如有时间有兴趣，需要看的东西无穷，但往往里面的模式是类似的，以上三方面的了解会对这些模式的把握有更多的帮助。过几天ICM2002就开始了，到月底，小人都比较忙，这几天有空再写写，然后9月份再算了。小人也将抓紧时间把飘在其它地方的心啊肺啊找回来。头就不要了，有小的还要大的干什么，无聊。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../qsqtzp/2022ndsyw/lsdyhgx.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../qsqtzp/2022ndsyw/xdzzlbpx.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../qsqtzp/2022ndsyw/lsdyhgx.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../qsqtzp/2022ndsyw/xdzzlbpx.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../../ace.js"></script>
+        <script src="../../editor.js"></script>
+        <script src="../../mode-rust.js"></script>
+        <script src="../../theme-dawn.js"></script>
+        <script src="../../theme-tomorrow_night.js"></script>
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

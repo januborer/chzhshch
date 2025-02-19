@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>41与1，本ID对二级市场兴趣已失 - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="41与1本id对二级市场兴趣已失"><a class="header" href="#41与1本id对二级市场兴趣已失">41与1，本ID对二级市场兴趣已失</a></h1>
+<blockquote>
+<p>2007/8/13 21:26:14</p>
+</blockquote>
+<p>周五，本ID是一边叨唠，一边让人报盘买股票。一个41元的股票，本ID最高买到近43元，心里越买越窝火。看看，里面的人，1元的成本，那种PE游戏，本ID也干着，凭什么让本ID贵了40来倍来买？</p>
+<p>今天下午，一个关于PE的谈判，本ID已经决定全面转战PE，当然，撤退是战略性的，本ID决定的原则是：第一，本ID将不会再买入任何二级市场的股票；第二，任何成本不为0的股票，本ID都将把成本逐步抛到0为止；对成本为0的股票，本ID将持有到大牛市结束，有空可以继续玩先砸后买增加筹码的游戏。</p>
+<p>本ID已经有了基本的判断，就是谁执PE牛耳，谁得中国资本市场的天下，PE中，除了Pre-IPO等，类似收购基金之类的，在中国依然没有大发展，当然，Pre-IPO这类活动当然不能放弃，但收购基金之类活动，也是可以逐步展开的。在中国，目前类似活动搞得比较好的，是一个生了5个孩子的海龟中男。</p>
+<p>当然，完全放弃二级市场是不行的，所以必须留下已经有的根据地。但如果现在不到PE上大发展一把，那么就整天为人做嫁衣裳了。前期，本ID那一顿忙，已经为此铺好了路。</p>
+<p>当然，在二级市场中，也有类PE的机会出现，也就是当大的波动让某些大的重组股票达到足够吸引的地步，这也是好的介入机会，在全流通时代，如何用收购基金的模式在二级市场搞上一票，这也是一个有趣的活动。但目前讨论这个问题有点无聊，现在，二级市场之外黄金满地，本ID脑子又没进水，没那闲工夫搞这二级市场了。</p>
+<p>以上都是心里话，也是本ID的决定。当然，PE的活，意味着整天要腐败，这是本ID最不喜欢的，当然，有些活可以让别人干，本ID只要有时间，依然会保持每天的解盘。毕竟，对于散户，二级市场是唯一可大面积介入的地方，而且，原始积累也只能靠这地方，山高水长，如果本ID能帮各位一把，也算结一段善缘。</p>
+<p>本ID会尽力为之，各位有缘得之吧。</p>
+<p>附录：</p>
+<p>各位请不要胡乱猜疑，本ID关于二级市场20年以上大牛市的判断从来没改变过。本ID春节后说在突破GDP之前，成分股为主的第一段行情一定不会结束，当时，有谁能如此明确的说？又有谁能把20年的大牛市给明确分了段？本ID的这观点从来没改变过。</p>
+<p>没有大牛市，PE也白搭，只是现在的二级市场，比起PE，利润太薄，那种能3年翻几十倍的股票越来越难找，但在PE里，一点都不难。</p>
+<p>资本都是往利润高的地方跑，本ID也不例外。</p>
+<p>本ID对大盘没有任何暗示，短线大盘的走势，看分段图甚至5日线就能判断，谁都没必要预测。</p>
+<p>累了，10点了，先下，再见。</p>
+<blockquote>
+<p>回复</p>
+<blockquote>
+<p>缠中说禅 2007/8/13 21:49:35</p>
+<p>刚才试验了一下，发现还是没办法让那时政经济能被显示，本ID电脑就这水平，各位找经济方面的文章，只能出所有文章中找了。</p>
+<p>缠中说禅 2007/8/13 21:56:16</p>
+<p>[匿名] 深潜江湖 删除此人所有评论</p>
+<p>2007-08-13 21:40:22</p>
+<p>老师好。</p>
+<p>大家现在对今天的32-33为什么不是三段有争论。毕竟符合其中的底分型成立的定义。</p>
+<p>希望老师能讲讲。</p>
+<p>另，我对各级别的组合后再寻找区间套特别乱，希望老师能说说</p>
+<p>前面写错了，致歉。</p>
+<p>==</p>
+<p>请先搞清楚底分型是从哪里开始算起，哪里开始结束。在这种前面是下跌的，对应的第二是上涨的，其特征序列就是看向下的，这第三个向下的，已经跌破原来第一段的底，怎么能属于第二段里的特征序列？</p>
+<p>特征序列的底或顶，首先必须要都属于这个特征序列才行，这是前提条件。其实，如果第二特征序列没有三个元素，就根本不存在出现分段中第二种情况的可能。</p>
+<p>缠中说禅 2007/8/13 22:03:06</p>
+<p>各位请不要胡乱猜疑，本ID关于二级市场20年以上大牛市的判断从来没改变过。本ID春节后说在突破GDP之前，成分股为主的第一段行情一定不会结束，当然，有谁能如此明确的说？又有谁能把20年的大牛市给明确分了段？本ID的这观点从来没改变过。</p>
+<p>没有大牛市，PE也白搭，只是现在的二级市场，比起PE，利润太薄，那种能3年翻几十倍的股票越来越难找，但在PE里，一点都不难。</p>
+<p>资本都是往利润高的地方跑，本ID也不例外。</p>
+<p>本ID对大盘没有任何暗示，短线大盘的走势，看分段图甚至5日线就能判断，谁都没必要预测。</p>
+<p>累了，10点了，先下，再见。</p>
+<p>缠中说禅 2007/8/13 22:05:04</p>
+<p>[匿名] 新浪网友 删除此人所有评论</p>
+<p>2007-08-13 21:53:15</p>
+<p>缠中说禅 删除此人所有评论</p>
+<p>2007-08-13 21:49:35</p>
+<p>刚才试验了一下，发现还是没办法让那时政经济能被显示，本ID电脑就这水平，各位找经济方面的文章，只能出所有文章中找了。</p>
+<hr />
+<p>缠中说禅博主</p>
+<p>你可以尝试着新建一个分类，然后把经济类文章加进去，如果这个新建的分类可以正常显示，那就可以把原来的分类删除掉，而改用新的。</p>
+<p>或者可以尝试把分类改名，然后再看看情况</p>
+<p>–</p>
+<p>谢谢，经济文章太多，一一搞一遍，只能等特别有空的时候。</p>
+<p>下了，再见。</p>
+<p>缠中说禅 2007/8/13 22:05:56</p>
+<p>各位请不要胡乱猜疑，本ID关于二级市场20年以上大牛市的判断从来没改变过。本ID春节后说在突破GDP之前，成分股为主的第一段行情一定不会结束，当时，有谁能如此明确的说？又有谁能把20年的大牛市给明确分了段？本ID的这观点从来没改变过。</p>
+<p>没有大牛市，PE也白搭，只是现在的二级市场，比起PE，利润太薄，那种能3年翻几十倍的股票越来越难找，但在PE里，一点都不难。</p>
+<p>资本都是往利润高的地方跑，本ID也不例外。</p>
+<p>本ID对大盘没有任何暗示，短线大盘的走势，看分段图甚至5日线就能判断，谁都没必要预测。</p>
+<p>累了，10点了，先下，再见。</p>
+<p>缠中说禅 2007/8/13 22:51:54</p>
+<p>缠主有必要事事都要亲自去做吗？数学、论语、音乐、股票肯定要花不少时间了，连PE都要亲自去，缠主是什么样的人呢？</p>
+</blockquote>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../shizhengjingji/rdrqmyz.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../shizhengjingji/rdmyygxmyxxs.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../shizhengjingji/rdrqmyz.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../shizhengjingji/rdmyygxmyxxs.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

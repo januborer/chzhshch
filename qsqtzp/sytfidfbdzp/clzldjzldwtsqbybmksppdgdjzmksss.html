@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>川流，在劳动价值论的问题上，请不要把马克思批判的观点加在马克思身上！ - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="川流在劳动价值论的问题上请不要把马克思批判的观点加在马克思身上"><a class="header" href="#川流在劳动价值论的问题上请不要把马克思批判的观点加在马克思身上">川流，在劳动价值论的问题上，请不要把马克思批判的观点加在马克思身上！</a></h1>
+<p>川流“在劳动价值论的问题上云谷子起码比糖粉正确100倍以上 ”的内容，基本都是西方经济学反驳马克思的一些惯常说法，因此也就有着他们一样的惯常错误，例如把马克思批判的观点加在马克思身上当成马克思的观点来批判。例如在该帖子里：（横线上是川流的原话引用，下面是我的评论）</p>
+<h1 id="作为一个科学命题劳动价值论应该表述成这样的形式市场中某一种商品的平均价格是劳动时间的一个单调递增函数从斯密和马克思等人的眼中的劳动价值论实际上还体现了这样的意思从长期来看市场中某一种商品的平均价格与平均劳动时间成正比"><a class="header" href="#作为一个科学命题劳动价值论应该表述成这样的形式市场中某一种商品的平均价格是劳动时间的一个单调递增函数从斯密和马克思等人的眼中的劳动价值论实际上还体现了这样的意思从长期来看市场中某一种商品的平均价格与平均劳动时间成正比">作为一个科学命题，劳动价值论应该表述成这样的形式，市场中某一种商品的平均价格是劳动时间的一个单调递增函数。从斯密和马克思等人的眼中的劳动价值论实际上还体现了这样的意思：从长期来看，市场中某一种商品的平均价格与平均劳动时间成正比。</a></h1>
+<p>这和马克思没关系的观点，这恰好是马克思批判的蒲鲁东的观点，把劳动时间当成一个先验的自变量而不是一个历史范畴，是一切非马克思观点的共同错误。</p>
+<h1 id="作为一个科学命题劳动价值论在它提出之日就已经被证伪因为它的创立者也承认劳动价值论无法解释资源品和奢侈品的价格反常现象直到今天只要你用实际的统计数据进行计算土地等资源品的价格与劳动时间之比与猪肉的价格与劳动之间之比也不是同一个数量级因此劳动价值论并不是一个可以接受的科学理论"><a class="header" href="#作为一个科学命题劳动价值论在它提出之日就已经被证伪因为它的创立者也承认劳动价值论无法解释资源品和奢侈品的价格反常现象直到今天只要你用实际的统计数据进行计算土地等资源品的价格与劳动时间之比与猪肉的价格与劳动之间之比也不是同一个数量级因此劳动价值论并不是一个可以接受的科学理论">作为一个科学命题，劳动价值论在它提出之日就已经被证伪，因为它的创立者也承认，劳动价值论无法解释资源品和奢侈品的价格反常现象。直到今天，只要你用实际的统计数据进行计算，土地等资源品的价格与劳动时间之比与猪肉的价格与劳动之间之比也不是同一个数量级，因此，劳动价值论并不是一个可以接受的科学理论。</a></h1>
+<p>和第一段是同样的错误，还是把劳动时间先验化了，由于该帖子这个错误一直都有，下面就不再专门指出。</p>
+<h1 id="事实上劳动价值论甚至连物以希为贵这样普遍的现象也解释不了"><a class="header" href="#事实上劳动价值论甚至连物以希为贵这样普遍的现象也解释不了">事实上，劳动价值论甚至连物以希为贵这样普遍的现象也解释不了。</a></h1>
+<p>这个解释十分简单，因为历史的原因，例如黄金，它在和别的物品交换时具有高的交换比例，也就是交换价值，但这个原因并不是先验的，物以希为贵并不是一个先验的前提。一个物品的交换价值是一个历史的概念，并没有任何绝对有交换价值的东西，一切的交换价值的形成，都是在人与人关系综合的社会结构历史发展中形成的，之所以有物以希为贵的现象，也是在人与人关系综合的社会结构历史发展中形成。反而把这种历史现象当成永恒的、先验的前提，是造成相应错误的根源。</p>
+<h1 id="比如以前有个叫胆小的蝙蝠的就明目张胆地把劳动价值论说成是哲学命题宗教命题但这已经违背了劳动价值论的初衷进入了鬼辩论的领域"><a class="header" href="#比如以前有个叫胆小的蝙蝠的就明目张胆地把劳动价值论说成是哲学命题宗教命题但这已经违背了劳动价值论的初衷进入了鬼辩论的领域">比如以前有个叫胆小的蝙蝠的，就明目张胆地把劳动价值论说成是哲学命题、宗教命题。但这已经违背了劳动价值论的初衷，进入了鬼辩论的领域。</a></h1>
+<p>判别是否真正理解马克思的标准其实很简单，就是把社会的总体性与历史性归结到单方面的哲学、经济、心理，都是非马克思的。并不是头上插一马克思的名字就可以马克思的。</p>
+<h1 id="糖粉网友虽然没有说得这么露骨但实质是一样的只知道量呀质呀地绕来绕去缠来禅去讲了半天也没有讲出劳动时间与价格到底是什么关系"><a class="header" href="#糖粉网友虽然没有说得这么露骨但实质是一样的只知道量呀质呀地绕来绕去缠来禅去讲了半天也没有讲出劳动时间与价格到底是什么关系">糖粉网友虽然没有说得这么露骨，但实质是一样的。只知道量呀、质呀地绕来绕去、缠来禅去，讲了半天，也没有讲出劳动时间与价格到底是什么关系。</a></h1>
+<p>如果劳动时间是一个非历史、非社会的抽象物理时间，那么价格和劳动时间没有任何必然关系。把价格和抽象的劳动时间挂起来，和马克思无关。对于，马克思来说，价格是交换价值的货币化。而交换价值本身，必须在社会总体、历史中考察，并没有任何单一因素能确定交换价值。而劳动同样不是一个抽象的概念，是一个社会总体人与人的关系中的一个历史范畴，并不只有拿把锄头、开开机器才是劳动！</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../qsqtzp/sytfidfbdzp/flxdcsfqfqcrdsxhjsjdbzqb.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../qsqtzp/sytfidfbdzp/flxdcsfndsyyxzrsdlzhcnsdbsyhsq.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../qsqtzp/sytfidfbdzp/flxdcsfqfqcrdsxhjsjdbzqb.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../qsqtzp/sytfidfbdzp/flxdcsfndsyyxzrsdlzhcnsdbsyhsq.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../../ace.js"></script>
+        <script src="../../editor.js"></script>
+        <script src="../../mode-rust.js"></script>
+        <script src="../../theme-dawn.js"></script>
+        <script src="../../theme-tomorrow_night.js"></script>
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

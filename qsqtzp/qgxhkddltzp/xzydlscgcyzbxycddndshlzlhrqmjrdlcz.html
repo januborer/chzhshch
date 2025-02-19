@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>现在已到了市场各参与者必须要彻底断奶的时候了--------再论华融全面介入德隆重组 (2004-9-3) - 全球第一博客--缠中说禅</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="全球第一博客，缠中说禅,缠论,教你炒股，全部文章">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">全球第一博客--缠中说禅</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/januborer/chzhshch" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="现在已到了市场各参与者必须要彻底断奶的时候了再论华融全面介入德隆重组-2004-9-3"><a class="header" href="#现在已到了市场各参与者必须要彻底断奶的时候了再论华融全面介入德隆重组-2004-9-3">现在已到了市场各参与者必须要彻底断奶的时候了––––再论华融全面介入德隆重组 (2004-9-3)</a></h1>
+<p>关于华融全面介入德隆重组，本女已经在前几天“政府绝不能为私人投机资本埋单，为华融介入重贴“在德隆系问题的处理上，中国政府将面临重大考验””中给出了基本的看法，但有些问题必须要继续阐明。</p>
+<p>其实，这事件以及所有其他类似事件的发生，最主要是目前市场各参与者都没有彻底断奶，不管思想、行动模式上都和习惯吃奶的小孩一样。不断奶的小孩永远长不大，由永远长不大的小孩构成这个市场的参与者，这市场又怎么可能成熟，怎么可能不问题不断呢？</p>
+<p>有人可能认为，政府已经成为人质能不自救吗？现在只是在为过去的错误埋单。但政府为什么要为形成这些所谓错误的层层黑幕埋单？政府为什么要成为人质？政府为什么要象那些一听孩子闹就慌的无能父母一样？政府现在应该做的就是用法律手段严惩投机分子，严惩为投机分子撑腰的幕后黑手。请问，对于唐家兄弟来说，按操纵股票价格罪就应该马上抓起来，至于什么非法集资、诈骗、贿赂等等，抓了以后再慢慢查，这难道还有什么问题吗？很明显，这些都是严重触犯中华人民共和国刑法的人，为什么还能逍遥法外？至于为德隆这么多年的恶行撑腰的，为什么还能来借着一些冠冕堂皇的理由企图就此蒙混过关？难道以后银行股份化以后，政府还要继续为此供奶吗？</p>
+<p>涉及其中的提供资金给德隆的大机构，难道没有基本的风险控制概念吗？他们的决策人难道就仅仅是决策失误吗？请注意，这些大机构基本都是国企。至于涉及其中的中小投资者，他们应该从中学会市场的风险，市场从来都不会承诺什么赢利，在市场里亏欠，和政府又有什么关系？好好审视一下你们投资时的贪婪和无知吧。</p>
+<p>市场不承诺任何事情，市场不欢迎小孩，市场无须母性。现在已经到了市场各参与者必须要彻底断奶的时候，政府应该以这事情为契机，不要再慈母多败儿了。</p>
+<p>在海龟和哈巴狗横行的年代，西方现代经济学是被当成神学的。神学就不会被讨论，更不能被解构了。神话是没有的，象数学都不能成为神学，借了些数学中的公理化思维就企图招摇撞骗的西方现代经济学能被当成神学，这也构成了中国世纪之交的一个新神话。</p>
+<p>乐于布道者其实只有两种，一种是真正迷醉的，这是心理层面的；一种是真正清醒的，这是利益层面的。对于利益，人从来不傻，而利益就是政治。而经济学也一样，经济学是利益层面的政治学，操作层面的心理学。</p>
+<p>在利益层面，经济学从来就是政治学。一个具体的经济现象，在学理上的解决方式肯定不止一种，但选择什么，就是一个政治性的问题了。而选择才是最根本的，没到拍板那一下，只不过瞎闹而已。例如目前的所谓通涨问题，在学理上解决的方式很多，选择哪一个，最终决定的还是政治立场，所谓政治立场，归根结底就是不同利益之间的博弈问题，方法后面的政治、利益动机是绝对不同的。</p>
+<p>而对于具体的操作来说，经济政策的效应更多的是在心理层面产生传导的，这里涉及的是心理学的问题。经济现象从根本上也是心理图象的物化过程，这一点从市场交易的走势图就可以清楚看到。</p>
+<p>有意或无意忽略上面两点，都只是玩文字或数字游戏。在书斋或堂会上骗骗钱当然没问题，但国家靠这些人，就真是危矣！</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../qsqtzp/qgxhkddltzp/gxdzjgxdsh.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../qsqtzp/qgxhkddltzp/zcthpzdzyyyjssdgyyhdgfhjssgg.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../qsqtzp/qgxhkddltzp/gxdzjgxdsh.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../qsqtzp/qgxhkddltzp/zcthpzdzyyyjssdgyyhdgfhjssgg.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../../ace.js"></script>
+        <script src="../../editor.js"></script>
+        <script src="../../mode-rust.js"></script>
+        <script src="../../theme-dawn.js"></script>
+        <script src="../../theme-tomorrow_night.js"></script>
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
